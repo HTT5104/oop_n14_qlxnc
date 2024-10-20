@@ -1,14 +1,16 @@
 package entity.paper;
 
 import java.util.*;
+import java.time.*;
+
 public class Passport extends Paper{
     private String code;
     private String type;
     private String identity_Card_Id;
-    private Date issue_Date;
-    private Date exp;
+    private LocalDate issue_Date;
+    private LocalDate exp;
 
-    public Passport(String code, String type, String identity_Card_Id, Date issue_Date, Date exp, String id, String name, String dob, boolean isMale, String nation) {
+    public Passport(String code, String type, String identity_Card_Id, LocalDate issue_Date, LocalDate exp, String id, String name, String dob, boolean isMale, String nation) {
         super(id, name, dob, isMale, nation);
         this.code = code;
         this.type = type;
@@ -41,19 +43,19 @@ public class Passport extends Paper{
         this.identity_Card_Id = identity_Card_Id;
     }
 
-    public Date getIssue_Date() {
+    public LocalDate getIssue_Date() {
         return issue_Date;
     }
 
-    public void setIssue_Date(Date issue_Date) {
+    public void setIssue_Date(LocalDate issue_Date) {
         this.issue_Date = issue_Date;
     }
 
-    public Date getExp() {
+    public LocalDate getExp() {
         return exp;
     }
 
-    public void setExp(Date exp) {
+    public void setExp(LocalDate exp) {
         this.exp = exp;
     }
     

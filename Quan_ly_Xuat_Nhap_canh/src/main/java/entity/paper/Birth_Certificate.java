@@ -1,6 +1,7 @@
 package entity.paper;
 
 import java.util.*;
+import java.time.*;
 
 public class Birth_Certificate extends Paper{
     private String birth_Place;
@@ -8,10 +9,10 @@ public class Birth_Certificate extends Paper{
     private String father;
     private String mother;
     private String registration_Place;
-    private Date registration_Date;
+    private LocalDate registration_Date;
     private String registrant;
 
-    public Birth_Certificate(String birth_Place, String ethnic, String father, String mother, String registration_Place, Date registration_Date, String registrant, String id, String name, String dob, boolean isMale, String nation) {
+    public Birth_Certificate(String birth_Place, String ethnic, String father, String mother, String registration_Place, LocalDate registration_Date, String registrant, String id, String name, String dob, boolean isMale, String nation) {
         super(id, name, dob, isMale, nation);
         this.birth_Place = birth_Place;
         this.ethnic = ethnic;
@@ -62,11 +63,11 @@ public class Birth_Certificate extends Paper{
         this.registration_Place = registration_Place;
     }
 
-    public Date getRegistration_Date() {
+    public LocalDate getRegistration_Date() {
         return registration_Date;
     }
 
-    public void setRegistration_Date(Date registration_Date) {
+    public void setRegistration_Date(LocalDate registration_Date) {
         this.registration_Date = registration_Date;
     }
 
