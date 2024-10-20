@@ -1,15 +1,17 @@
 package entity.paper;
 
 import java.util.*;
+import java.time.*;
+
 public class Visa extends Paper{
     private String category;
     private String passport_Id;
     private boolean isMultiple;
-    private Date valid_Date;
-    private Date exp;
-    private Date issue_Date;
+    private LocalDate valid_Date;
+    private LocalDate exp;
+    private LocalDate issue_Date;
 
-    public Visa(String category, String passport_Id, boolean isMultiple, Date valid_Date, Date exp, Date issue_Date, String id, String name, String dob, boolean isMale, String nation) {
+    public Visa(String category, String passport_Id, boolean isMultiple, LocalDate valid_Date, LocalDate exp, LocalDate issue_Date, String id, String name, String dob, boolean isMale, String nation) {
         super(id, name, dob, isMale, nation);
         this.category = category;
         this.passport_Id = passport_Id;
@@ -43,27 +45,27 @@ public class Visa extends Paper{
         this.isMultiple = isMultiple;
     }
 
-    public Date getValid_Date() {
+    public LocalDate getValid_Date() {
         return valid_Date;
     }
 
-    public void setValid_Date(Date valid_Date) {
+    public void setValid_Date(LocalDate valid_Date) {
         this.valid_Date = valid_Date;
     }
 
-    public Date getExp() {
+    public LocalDate getExp() {
         return exp;
     }
 
-    public void setExp(Date exp) {
+    public void setExp(LocalDate exp) {
         this.exp = exp;
     }
 
-    public Date getIssue_Date() {
+    public LocalDate getIssue_Date() {
         return issue_Date;
     }
 
-    public void setIssue_Date(Date issue_Date) {
+    public void setIssue_Date(LocalDate issue_Date) {
         this.issue_Date = issue_Date;
     }
     

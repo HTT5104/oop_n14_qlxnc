@@ -1,14 +1,15 @@
 package entity.paper;
 
 import java.util.*;
+import java.time.*;
 
 public class Identity_Card extends Paper{
     private String origin;
     private String residence;
-    private Date issue_Date;
-    private Date exp;
+    private LocalDate issue_Date;
+    private LocalDate exp;
     private String identification;
-    public Identity_Card(String id, String name, String dob, boolean isMale, String nation, String origin, String residence, Date issue_Date, Date exp, String identification) {
+    public Identity_Card(String id, String name, String dob, boolean isMale, String nation, String origin, String residence, LocalDate issue_Date, LocalDate exp, String identification) {
         super(id, name, dob, isMale, nation);
         this.origin = origin;
         this.residence = residence;
@@ -33,19 +34,19 @@ public class Identity_Card extends Paper{
         this.residence = residence;
     }
 
-    public Date getIssue_Date() {
+    public LocalDate getIssue_Date() {
         return issue_Date;
     }
 
-    public void setIssue_Date(Date issue_Date) {
+    public void setIssue_Date(LocalDate issue_Date) {
         this.issue_Date = issue_Date;
     }
 
-    public Date getExp() {
+    public LocalDate getExp() {
         return exp;
     }
 
-    public void setExp(Date exp) {
+    public void setExp(LocalDate exp) {
         this.exp = exp;
     }
 
