@@ -19,6 +19,9 @@ public class Record {
     protected boolean isMale;
     protected boolean isForeign;
 
+    public Record() {
+    }
+
     public Record(String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale) {
         this.time = LocalDateTime.now();
         this.airport = airport;

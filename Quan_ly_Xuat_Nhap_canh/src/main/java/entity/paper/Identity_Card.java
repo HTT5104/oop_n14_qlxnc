@@ -12,6 +12,10 @@ public class Identity_Card extends Paper{
     private LocalDate issue_Date;
     private LocalDate exp;
     private String identification;
+
+    public Identity_Card() {
+    }
+    
     public Identity_Card(String id, String name, String dob, boolean isMale, String nation, String origin, String residence, LocalDate issue_Date, LocalDate exp, String identification) {
         super(id, name, dob, isMale, nation);
         this.origin = origin;

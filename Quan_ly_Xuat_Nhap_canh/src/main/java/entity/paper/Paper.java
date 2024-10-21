@@ -11,6 +11,9 @@ public class Paper {
     protected boolean isMale;
     protected String nation;
 
+    public Paper() {
+    }
+    
     public Paper(String id, String name, String dob, boolean isMale, String nation) {
         this.id = id;
         this.name = name;
