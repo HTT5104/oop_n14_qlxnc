@@ -2,7 +2,10 @@ package entity.immigration;
 
 import java.util.*;
 import java.time.*;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Record {
     protected LocalDateTime time;
     protected String airport;
@@ -29,6 +32,7 @@ public class Record {
         this.isMale = isMale;
     }
 
+    @XmlElement
     public String getAirport() {
         return airport;
     }
@@ -37,6 +41,7 @@ public class Record {
         this.airport = airport;
     }
 
+    @XmlElement
     public String getAirport_Id() {
         return airport_Id;
     }
@@ -45,6 +50,7 @@ public class Record {
         this.airport_Id = airport_Id;
     }
 
+    @XmlElement
     public String getFlight() {
         return flight;
     }
@@ -53,6 +59,7 @@ public class Record {
         this.flight = flight;
     }
 
+    @XmlElement
     public String getAirline() {
         return airline;
     }
@@ -61,6 +68,7 @@ public class Record {
         this.airline = airline;
     }
 
+    @XmlElement
     public int getGate() {
         return gate;
     }
@@ -69,6 +77,7 @@ public class Record {
         this.gate = gate;
     }
 
+    @XmlElement
     public String getName() {
         return name;
     }
@@ -77,6 +86,7 @@ public class Record {
         this.name = name;
     }
 
+    @XmlElement
     public String getNation() {
         return nation;
     }
@@ -85,6 +95,7 @@ public class Record {
         this.nation = nation;
     }
 
+    @XmlElement
     public LocalDate getDob() {
         return dob;
     }
@@ -93,6 +104,7 @@ public class Record {
         this.dob = dob;
     }
 
+    @XmlElement
     public boolean isIsMale() {
         return isMale;
     }
@@ -101,6 +113,7 @@ public class Record {
         this.isMale = isMale;
     }
 
+    @XmlElement
     public boolean isIsForeign() {
         return isForeign;
     }

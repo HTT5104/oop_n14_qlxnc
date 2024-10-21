@@ -1,5 +1,9 @@
 package entity;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class User {
     private String id;
     private String role;
@@ -13,6 +17,7 @@ public class User {
         this.md5_Password = "dd4b21e9ef71e1291183a46b913ae6f2";
     }
 
+    @XmlElement
     public String getId() {
         return id;
     }
@@ -21,6 +26,7 @@ public class User {
         this.id = id;
     }
 
+    @XmlElement
     public String getName() {
         return name;
     }
@@ -29,6 +35,7 @@ public class User {
         this.name = name;
     }
 
+    @XmlElement
     public String getMd5_Password() {
         return md5_Password;
     }

@@ -2,7 +2,10 @@ package entity.paper;
 
 import java.util.*;
 import java.time.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlElement;
 
+@XmlRootElement
 public class Birth_Certificate extends Paper{
     private String birth_Place;
     private String ethnic;
@@ -23,6 +26,7 @@ public class Birth_Certificate extends Paper{
         this.registrant = registrant;
     }
 
+    @XmlElement
     public String getBirth_Place() {
         return birth_Place;
     }
@@ -31,6 +35,7 @@ public class Birth_Certificate extends Paper{
         this.birth_Place = birth_Place;
     }
 
+    @XmlElement
     public String getEthnic() {
         return ethnic;
     }
@@ -39,6 +44,7 @@ public class Birth_Certificate extends Paper{
         this.ethnic = ethnic;
     }
 
+    @XmlElement
     public String getFather() {
         return father;
     }
@@ -47,6 +53,7 @@ public class Birth_Certificate extends Paper{
         this.father = father;
     }
 
+    @XmlElement
     public String getMother() {
         return mother;
     }
@@ -55,6 +62,7 @@ public class Birth_Certificate extends Paper{
         this.mother = mother;
     }
 
+    @XmlElement
     public String getRegistration_Place() {
         return registration_Place;
     }
@@ -63,6 +71,7 @@ public class Birth_Certificate extends Paper{
         this.registration_Place = registration_Place;
     }
 
+    @XmlElement
     public LocalDate getRegistration_Date() {
         return registration_Date;
     }
@@ -71,6 +80,7 @@ public class Birth_Certificate extends Paper{
         this.registration_Date = registration_Date;
     }
 
+    @XmlElement
     public String getRegistrant() {
         return registrant;
     }

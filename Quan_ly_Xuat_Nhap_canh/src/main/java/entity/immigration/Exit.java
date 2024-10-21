@@ -5,7 +5,10 @@ import entity.paper.Identity_Card;
 import entity.paper.Passport;
 import entity.paper.Visa;
 import java.time.LocalDate;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Exit extends Record{
     private Passport passport;
     private Visa visa;
@@ -55,6 +58,7 @@ public class Exit extends Record{
         this.birth_Cert = birth_Cert;
     }
 
+    @XmlElement
     public Passport getPassport() {
         return passport;
     }
@@ -63,6 +67,7 @@ public class Exit extends Record{
         this.passport = passport;
     }
 
+    @XmlElement
     public Visa getVisa() {
         return visa;
     }
@@ -71,6 +76,7 @@ public class Exit extends Record{
         this.visa = visa;
     }
 
+    @XmlElement
     public Identity_Card getId_Card() {
         return id_Card;
     }
@@ -79,6 +85,7 @@ public class Exit extends Record{
         this.id_Card = id_Card;
     }
 
+    @XmlElement
     public Birth_Certificate getBirth_Cert() {
         return birth_Cert;
     }

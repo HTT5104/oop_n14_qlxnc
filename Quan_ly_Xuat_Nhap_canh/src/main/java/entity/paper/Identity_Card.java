@@ -2,7 +2,10 @@ package entity.paper;
 
 import java.util.*;
 import java.time.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlElement;
 
+@XmlRootElement
 public class Identity_Card extends Paper{
     private String origin;
     private String residence;
@@ -18,6 +21,7 @@ public class Identity_Card extends Paper{
         this.identification = identification;
     }
 
+    @XmlElement
     public String getOrigin() {
         return origin;
     }
@@ -26,6 +30,7 @@ public class Identity_Card extends Paper{
         this.origin = origin;
     }
 
+    @XmlElement
     public String getResidence() {
         return residence;
     }
@@ -34,6 +39,7 @@ public class Identity_Card extends Paper{
         this.residence = residence;
     }
 
+    @XmlElement
     public LocalDate getIssue_Date() {
         return issue_Date;
     }
@@ -42,6 +48,7 @@ public class Identity_Card extends Paper{
         this.issue_Date = issue_Date;
     }
 
+    @XmlElement
     public LocalDate getExp() {
         return exp;
     }
@@ -50,6 +57,7 @@ public class Identity_Card extends Paper{
         this.exp = exp;
     }
 
+    @XmlElement
     public String getIdentification() {
         return identification;
     }

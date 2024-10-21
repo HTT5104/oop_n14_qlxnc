@@ -2,7 +2,10 @@ package entity.paper;
 
 import java.util.*;
 import java.time.*;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Visa extends Paper{
     private String category;
     private String passport_Id;
@@ -21,6 +24,7 @@ public class Visa extends Paper{
         this.issue_Date = issue_Date;
     }
 
+    @XmlElement
     public String getCategory() {
         return category;
     }
@@ -29,6 +33,7 @@ public class Visa extends Paper{
         this.category = category;
     }
 
+    @XmlElement
     public String getPassport_Id() {
         return passport_Id;
     }
@@ -37,6 +42,7 @@ public class Visa extends Paper{
         this.passport_Id = passport_Id;
     }
 
+    @XmlElement
     public boolean isIsMultiple() {
         return isMultiple;
     }
@@ -45,6 +51,7 @@ public class Visa extends Paper{
         this.isMultiple = isMultiple;
     }
 
+    @XmlElement
     public LocalDate getValid_Date() {
         return valid_Date;
     }
@@ -53,6 +60,7 @@ public class Visa extends Paper{
         this.valid_Date = valid_Date;
     }
 
+    @XmlElement
     public LocalDate getExp() {
         return exp;
     }
@@ -61,6 +69,7 @@ public class Visa extends Paper{
         this.exp = exp;
     }
 
+    @XmlElement
     public LocalDate getIssue_Date() {
         return issue_Date;
     }

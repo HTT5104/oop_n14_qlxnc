@@ -7,7 +7,10 @@ import entity.paper.Identity_Card;
 import entity.paper.Passport;
 import entity.paper.Visa;
 import java.time.LocalDate;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Entry extends Record{
     private Identity_Card id_Card;
     private Birth_Certificate birth_Cert;
@@ -52,6 +55,7 @@ public class Entry extends Record{
         this.place = place;
     }
 
+    @XmlElement
     public Identity_Card getId_card() {
         return id_Card;
     }
@@ -60,6 +64,7 @@ public class Entry extends Record{
         this.id_Card = id_Card;
     }
 
+    @XmlElement
     public Birth_Certificate getBirth_cert() {
         return birth_Cert;
     }
@@ -68,6 +73,7 @@ public class Entry extends Record{
         this.birth_Cert = birth_Cert;
     }
 
+    @XmlElement
     public String getReason() {
         return reason;
     }
@@ -76,6 +82,7 @@ public class Entry extends Record{
         this.reason = reason;
     }
 
+    @XmlElement
     public Passport getPassport() {
         return passport;
     }
@@ -84,6 +91,7 @@ public class Entry extends Record{
         this.passport = passport;
     }
 
+    @XmlElement
     public Visa getVisa() {
         return visa;
     }
@@ -92,6 +100,7 @@ public class Entry extends Record{
         this.visa = visa;
     }
 
+    @XmlElement
     public int getStay() {
         return stay;
     }
@@ -100,6 +109,7 @@ public class Entry extends Record{
         this.stay = stay;
     }
 
+    @XmlElement
     public String getPlace() {
         return place;
     }

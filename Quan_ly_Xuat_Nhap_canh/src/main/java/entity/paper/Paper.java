@@ -1,5 +1,9 @@
 package entity.paper;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Paper {
     protected String id;
     protected String name;
@@ -15,6 +19,7 @@ public class Paper {
         this.nation = nation;
     }
 
+    @XmlElement
     public String getId() {
         return id;
     }
@@ -23,6 +28,7 @@ public class Paper {
         this.id = id;
     }
 
+    @XmlElement
     public String getName() {
         return name;
     }
@@ -31,6 +37,7 @@ public class Paper {
         this.name = name;
     }
 
+    @XmlElement
     public String getDob() {
         return dob;
     }
@@ -39,6 +46,7 @@ public class Paper {
         this.dob = dob;
     }
 
+    @XmlElement
     public boolean isIsMale() {
         return isMale;
     }
@@ -47,6 +55,7 @@ public class Paper {
         this.isMale = isMale;
     }
 
+    @XmlElement
     public String getNation() {
         return nation;
     }

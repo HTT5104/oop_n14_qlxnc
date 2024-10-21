@@ -2,7 +2,10 @@ package entity.paper;
 
 import java.util.*;
 import java.time.*;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Passport extends Paper{
     private String code;
     private String type;
@@ -19,6 +22,7 @@ public class Passport extends Paper{
         this.exp = exp;
     }
 
+    @XmlElement
     public String getCode() {
         return code;
     }
@@ -27,6 +31,7 @@ public class Passport extends Paper{
         this.code = code;
     }
 
+    @XmlElement
     public String getType() {
         return type;
     }
@@ -35,6 +40,7 @@ public class Passport extends Paper{
         this.type = type;
     }
 
+    @XmlElement
     public String getIdentity_Card_Id() {
         return identity_Card_Id;
     }
@@ -43,6 +49,7 @@ public class Passport extends Paper{
         this.identity_Card_Id = identity_Card_Id;
     }
 
+    @XmlElement
     public LocalDate getIssue_Date() {
         return issue_Date;
     }
@@ -51,6 +58,7 @@ public class Passport extends Paper{
         this.issue_Date = issue_Date;
     }
 
+    @XmlElement
     public LocalDate getExp() {
         return exp;
     }
