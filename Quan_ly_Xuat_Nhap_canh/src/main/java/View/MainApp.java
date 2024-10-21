@@ -15,8 +15,8 @@ import java.awt.event.ActionListener;
 public class MainApp {
     public static void main(String[] args) {
         // Tạo đối tượng cho giao diện đăng nhập và quản lý
-        DangNhap loginFrame = new DangNhap();
-        NhanVien NV = new NhanVien();
+        View_Login loginFrame = new View_Login();
+        View_Staff NV = new View_Staff();
         
         // Hiển thị giao diện đăng nhập
         loginFrame.setVisible(true);
