@@ -10,4 +10,16 @@
         <maven.compiler.release>23</maven.compiler.release>
         <exec.mainClass>group1.quan_ly_xuat_nhap_canh.Quan_ly_Xuat_Nhap_canh</exec.mainClass>
     </properties>
+    <dependencies>
+    <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>2.3.1</version>
+    </dependency>
+    <dependency>
+        <groupId>org.glassfish.jaxb</groupId>
+        <artifactId>jaxb-runtime</artifactId>
+        <version>2.3.1</version>
+    </dependency>
+</dependencies>
 </project>
