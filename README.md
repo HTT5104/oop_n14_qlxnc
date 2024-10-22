@@ -1,4 +1,5 @@
 # Nhóm 1 - Đề 27 - Quản lý xuất nhập cảnh
+
 ## 1. Phân quyền người dùng
 
 ### 1.1. Quản lý (Manager):
@@ -32,7 +33,10 @@
 - Tìm kiếm các đối tượng theo thuộc tính
 
 ### 2.4. Danh sách truy nã
-Tương tự như Danh sách nhân viên
+- Người dùng: Manager và Staff (chỉ xem)
+- Thêm: Nhập thông tin rồi thêm
+- Xóa: Chọn 1 đối tượng rồi xóa
+- Tìm kiếm các đối tượng theo thuộc tính
 
 ### 2.5. Danh sách quá hạn
 - Tính toán ngày hết hạn nhập cảnh của khách quốc tế
@@ -43,4 +47,14 @@ Tương tự như Danh sách nhân viên
 - Staff tiếp nhận 1 khách xuất/nhập cảnh sẽ tồn tại 1 bản ghi vào dữ liệu
 - Manager có thể xem danh sách này và lọc theo nhiều tiêu chí
 
-### 2.7. 
+### 2.7. Nhập cảnh
+- Đối tượng: Staff
+- Nhập thông tin của lần nhập cảnh
+- Nhập thông tin giấy tờ của khách
+- Hệ thống hiện thông báo nếu khách bị truy nã hoặc thông tin giấy tờ không khớp
+
+### 2.8. Xuất cảnh
+- Đối tượng: Staff
+- Nhập thông tin của lần xuất cảnh
+- Nhập thông tin giấy tờ của khách
+- Hệ thống hiện thông báo nếu thông tin giấy tờ không khớp
