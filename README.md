@@ -58,3 +58,19 @@
 - Nhập thông tin của lần xuất cảnh
 - Nhập thông tin giấy tờ của khách
 - Hệ thống hiện thông báo nếu thông tin giấy tờ không khớp
+
+## 3. Các đối tượng
+### 3.1. Người dùng
+Định nghĩa cho hai đối tượng được phân quyền: Manager và Staff
+
+### 3.2. Paper
+Mỗi loại giấy tờ của một khách hàng được coi là một đối tượng
+- CCCD
+- Giấy khai sinh
+- Hộ chiếu
+- Visa
+
+### 3.3. Bản ghi
+Mỗi bản ghi vào lịch sử xuất nhập cảnh được coi là một đối tượng
+- Nhập cảnh
+- Xuất cảnh
