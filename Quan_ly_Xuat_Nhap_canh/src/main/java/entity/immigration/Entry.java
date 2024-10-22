@@ -6,7 +6,6 @@ import entity.paper.Birth_Certificate;
 import entity.paper.Identity_Card;
 import entity.paper.Passport;
 import entity.paper.Visa;
-import java.time.LocalDate;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -21,22 +20,22 @@ public class Entry extends Record{
     private String place;
 
     //Constructor cho khách nội địa dùng CCCD
-    public Entry(String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale, Identity_Card id_Card) {
-        super(airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
+    public Entry(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, Identity_Card id_Card) {
+        super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
         super.isForeign = false;
         this.id_Card = id_Card;
     }
 
     //Constructor cho khách nội địa dùng giấy khai sinh
-    public Entry(String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale, Birth_Certificate birth_Cert) {
-        super(airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
+    public Entry(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, Birth_Certificate birth_Cert) {
+        super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
         super.isForeign = false;
         this.birth_Cert = birth_Cert;
     }
 
     //Constructor cho khách quốc tế cần thị thực
-    public Entry(String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale, String reason, Passport passport, Visa visa, int stay, String place) {
-        super(airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
+    public Entry(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, String reason, Passport passport, Visa visa, int stay, String place) {
+        super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
         super.isForeign = true;
         this.reason = reason;
         this.passport = passport;
@@ -46,8 +45,8 @@ public class Entry extends Record{
     }
     
     //Constructor cho khách quốc tế miễn thị thực
-    public Entry(String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale, String reason, Passport passport, int stay, String place) {
-        super(airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
+    public Entry(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, String reason, Passport passport, int stay, String place) {
+        super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
         super.isForeign = true;
         this.reason = reason;
         this.passport = passport;

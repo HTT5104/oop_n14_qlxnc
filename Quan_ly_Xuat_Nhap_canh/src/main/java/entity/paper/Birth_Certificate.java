@@ -12,10 +12,10 @@ public class Birth_Certificate extends Paper{
     private String father;
     private String mother;
     private String registration_Place;
-    private LocalDate registration_Date;
+    private String registration_Date;
     private String registrant;
 
-    public Birth_Certificate(String birth_Place, String ethnic, String father, String mother, String registration_Place, LocalDate registration_Date, String registrant, String id, String name, String dob, boolean isMale, String nation) {
+    public Birth_Certificate(String birth_Place, String ethnic, String father, String mother, String registration_Place, String registration_Date, String registrant, String id, String name, String dob, boolean isMale, String nation) {
         super(id, name, dob, isMale, nation);
         this.birth_Place = birth_Place;
         this.ethnic = ethnic;
@@ -72,11 +72,11 @@ public class Birth_Certificate extends Paper{
     }
 
     @XmlElement
-    public LocalDate getRegistration_Date() {
+    public String getRegistration_Date() {
         return registration_Date;
     }
 
-    public void setRegistration_Date(LocalDate registration_Date) {
+    public void setRegistration_Date(String registration_Date) {
         this.registration_Date = registration_Date;
     }
 

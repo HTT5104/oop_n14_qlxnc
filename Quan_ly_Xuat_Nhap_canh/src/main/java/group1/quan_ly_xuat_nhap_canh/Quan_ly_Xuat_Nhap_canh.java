@@ -21,7 +21,7 @@ import javax.xml.bind.Unmarshaller;
 public class Quan_ly_Xuat_Nhap_canh {
 
     public static void main(String[] args) {
-        Identity_Card id_card = new Identity_Card("001204005037", "Ha Tai Thanh", "05_01_2004", true, "Vietnam", "Hanoi", "78 Quan Su", LocalDate.of(2004, Month.JANUARY, 5), LocalDate.of(2004, Month.JANUARY, 5), "");
-        Entry test = new Entry("Noi Bai", "VN_NB", "VNA123", "Vietnam Airline", 5, "Ha Tai Thanh", "Vietnam", LocalDate.of(2004, Month.JANUARY, 5), true, id_card);
+        Identity_Card id_card = new Identity_Card("001204005037", "Ha Tai Thanh", "05/01/2004", true, "Vietnam", "Hanoi", "78 Quan Su", "05/01/2004", "05/01/2004", "");
+        Entry test = new Entry("22/10/2024 12:57:34","Noi Bai", "VN_NB", "VNA123", "Vietnam Airline", 5, "Ha Tai Thanh", "Vietnam", "05/01/2004", true, id_card);
     }
 }

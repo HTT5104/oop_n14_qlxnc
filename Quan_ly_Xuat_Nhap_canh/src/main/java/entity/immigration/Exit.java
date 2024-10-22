@@ -4,7 +4,6 @@ import entity.paper.Birth_Certificate;
 import entity.paper.Identity_Card;
 import entity.paper.Passport;
 import entity.paper.Visa;
-import java.time.LocalDate;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -15,43 +14,43 @@ public class Exit extends Record{
     private Identity_Card id_Card;
     private Birth_Certificate birth_Cert;
 
-    public Exit(Passport passport, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale) {
-        super(airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
+    public Exit(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, Passport passport) {
+        super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
         super.isForeign = true;
         this.passport = passport;
     }
 
-    public Exit(Passport passport, Visa visa, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale) {
-        super(airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
+    public Exit(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, Passport passport, Visa visa) {
+        super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
         super.isForeign = true;
         this.passport = passport;
         this.visa = visa;
     }
 
-    public Exit(Passport passport, Identity_Card id_Card, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale) {
-        super(airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
+    public Exit(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, Passport passport, Identity_Card id_Card) {
+        super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
         super.isForeign = false;
         this.passport = passport;
         this.id_Card = id_Card;
     }
 
-    public Exit(Passport passport, Visa visa, Identity_Card id_Card, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale) {
-        super(airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
+    public Exit(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, Passport passport, Visa visa, Identity_Card id_Card) {
+        super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
         super.isForeign = false;
         this.passport = passport;
         this.visa = visa;
         this.id_Card = id_Card;
     }
 
-    public Exit(Passport passport, Birth_Certificate birth_Cert, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale) {
-        super(airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
+    public Exit(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, Passport passport, Birth_Certificate birth_Cert) {
+        super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
         super.isForeign = false;
         this.passport = passport;
         this.birth_Cert = birth_Cert;
     }
 
-    public Exit(Passport passport, Visa visa, Birth_Certificate birth_Cert, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale) {
-        super(airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
+    public Exit(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, Passport passport, Visa visa, Birth_Certificate birth_Cert) {
+        super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
         super.isForeign = false;
         this.passport = passport;
         this.visa = visa;
