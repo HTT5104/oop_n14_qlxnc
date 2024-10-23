@@ -21,6 +21,11 @@ public class Identity_Card extends Paper{
         this.identification = identification;
     }
 
+    public Identity_Card() {
+    }
+    
+    
+
     @XmlElement
     public String getOrigin() {
         return origin;

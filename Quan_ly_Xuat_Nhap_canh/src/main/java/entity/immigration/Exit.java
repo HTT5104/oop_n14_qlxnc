@@ -14,6 +14,11 @@ public class Exit extends Record{
     private Identity_Card id_Card;
     private Birth_Certificate birth_Cert;
 
+    public Exit() {
+    }
+    
+    
+
     public Exit(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, Passport passport) {
         super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);
         super.isForeign = true;

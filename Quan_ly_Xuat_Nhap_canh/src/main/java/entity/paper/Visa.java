@@ -14,6 +14,10 @@ public class Visa extends Paper{
     private String exp;
     private String issue_Date;
 
+    public Visa() {
+    }
+    
+
     public Visa(String category, String passport_Id, boolean isMultiple, String valid_Date, String exp, String issue_Date, String id, String name, String dob, boolean isMale, String nation) {
         super(id, name, dob, isMale, nation);
         this.category = category;

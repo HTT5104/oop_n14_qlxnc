@@ -19,6 +19,11 @@ public class Paper {
         this.nation = nation;
     }
 
+    public Paper() {
+    }
+    
+    
+
     @XmlElement
     public String getId() {
         return id;

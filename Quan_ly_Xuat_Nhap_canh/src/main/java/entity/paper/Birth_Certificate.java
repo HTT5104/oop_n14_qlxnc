@@ -15,6 +15,10 @@ public class Birth_Certificate extends Paper{
     private String registration_Date;
     private String registrant;
 
+    public Birth_Certificate() {
+    }
+    
+
     public Birth_Certificate(String birth_Place, String ethnic, String father, String mother, String registration_Place, String registration_Date, String registrant, String id, String name, String dob, boolean isMale, String nation) {
         super(id, name, dob, isMale, nation);
         this.birth_Place = birth_Place;

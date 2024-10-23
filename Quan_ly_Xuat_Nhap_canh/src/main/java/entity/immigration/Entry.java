@@ -19,6 +19,10 @@ public class Entry extends Record{
     private int stay;
     private String place;
 
+    public Entry() {
+    }
+    
+
     //Constructor cho khách nội địa dùng CCCD
     public Entry(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, Identity_Card id_Card) {
         super(time, airport, airport_Id, flight, airline, gate, name, nation, dob, isMale);

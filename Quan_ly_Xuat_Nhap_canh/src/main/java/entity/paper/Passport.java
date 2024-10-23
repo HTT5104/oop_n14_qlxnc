@@ -13,6 +13,10 @@ public class Passport extends Paper{
     private String issue_Date;
     private String exp;
 
+    public Passport() {
+    }
+    
+
     public Passport(String code, String type, String identity_Card_Id, String issue_Date, String exp, String id, String name, String dob, boolean isMale, String nation) {
         super(id, name, dob, isMale, nation);
         this.code = code;
