@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entry>
+    <airline>Vietnam Airline</airline>
+    <airport>Noi Bai</airport>
+    <airport_Id>VN_NB</airport_Id>
+    <dob>05/01/2004</dob>
+    <flight>VNA123</flight>
+    <gate>5</gate>
+    <isForeign>false</isForeign>
+    <isMale>true</isMale>
+    <name>Ha Tai Thanh</name>
+    <nation>Vietnam</nation>
+    <id_card>
+        <dob>05/01/2004</dob>
+        <id>001204005037</id>
+        <isMale>true</isMale>
+        <name>Linh</name>
+        <nation>Vietnam</nation>
+        <exp>05/01/2004</exp>
+        <identification></identification>
+        <issue_Date>05/01/2004</issue_Date>
+        <origin>Hanoi</origin>
+        <residence>78 Quan Su</residence>
+    </id_card>
+    <stay>0</stay>
+</entry>

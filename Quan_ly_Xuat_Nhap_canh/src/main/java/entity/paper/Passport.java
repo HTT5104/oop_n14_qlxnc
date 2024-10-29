@@ -10,10 +10,14 @@ public class Passport extends Paper{
     private String code;
     private String type;
     private String identity_Card_Id;
-    private LocalDate issue_Date;
-    private LocalDate exp;
+    private String issue_Date;
+    private String exp;
 
-    public Passport(String code, String type, String identity_Card_Id, LocalDate issue_Date, LocalDate exp, String id, String name, String dob, boolean isMale, String nation) {
+    public Passport() {
+    }
+    
+
+    public Passport(String code, String type, String identity_Card_Id, String issue_Date, String exp, String id, String name, String dob, boolean isMale, String nation) {
         super(id, name, dob, isMale, nation);
         this.code = code;
         this.type = type;
@@ -50,20 +54,20 @@ public class Passport extends Paper{
     }
 
     @XmlElement
-    public LocalDate getIssue_Date() {
+    public String getIssue_Date() {
         return issue_Date;
     }
 
-    public void setIssue_Date(LocalDate issue_Date) {
+    public void setIssue_Date(String issue_Date) {
         this.issue_Date = issue_Date;
     }
 
     @XmlElement
-    public LocalDate getExp() {
+    public String getExp() {
         return exp;
     }
 
-    public void setExp(LocalDate exp) {
+    public void setExp(String exp) {
         this.exp = exp;
     }
     

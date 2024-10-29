@@ -1,8 +1,10 @@
+package view;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package View;
+
 
 /**
  *
@@ -40,9 +42,6 @@ public class View_Login extends javax.swing.JFrame {
         id = new javax.swing.JTextField();
         login = new javax.swing.JButton();
         password = new javax.swing.JPasswordField();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -101,14 +100,6 @@ public class View_Login extends javax.swing.JFrame {
             }
         });
 
-        jMenu3.setText("File");
-        jMenuBar1.add(jMenu3);
-
-        jMenu4.setText("Edit");
-        jMenuBar1.add(jMenu4);
-
-        setJMenuBar(jMenuBar1);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -155,7 +146,7 @@ public class View_Login extends javax.swing.JFrame {
                     .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addComponent(login)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         pack();
@@ -232,9 +223,6 @@ public class View_Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JButton login;
