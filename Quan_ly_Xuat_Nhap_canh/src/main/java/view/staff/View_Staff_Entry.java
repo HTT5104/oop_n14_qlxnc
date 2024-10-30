@@ -318,7 +318,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
     private void check_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_ButtonActionPerformed
         // TODO add your handling code here:
         String dob = (String)dob_Day_Combobox.getSelectedItem() + "/" + (String)dob_Month_Combobox.getSelectedItem() + "/" +(String)dob_Year_Combobox.getSelectedItem();
-        Controller_Staff.save_Temp_Entry_Id_Card(airport_Field.getText(), airport_Id_Field.getText(), flight_Field.getText(), airline_Field.getText(), (int)gate_Spinner.getValue(), name_Field.getText(), (String) nation_Combobox.getSelectedItem(), dob, isMale_Rbutton.isSelected());
+        Controller_Staff.check_Info_Id_Card(name_Field.getText(), (String) nation_Combobox.getSelectedItem(), dob, isMale_Rbutton.isSelected());
     }//GEN-LAST:event_check_ButtonActionPerformed
 
     private void isMale_RbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isMale_RbuttonActionPerformed
@@ -375,6 +375,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
     
     public static void run(){
         new View_Staff_Entry().setVisible(true);
+        Controller_Staff.reset_Paper();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

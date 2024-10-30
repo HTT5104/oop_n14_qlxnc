@@ -11,20 +11,29 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.*;
 import javax.xml.bind.*;
 
 public class Controller_Staff {
     private static Identity_Card id_Card;
-    private Birth_Certificate birth_Cert;
-    private Passport passport;
-    private Visa visa;
+    private static Birth_Certificate birth_Cert;
+    private static Passport passport;
+    private static Visa visa;
+    private static String warning;
     
+    public static void reset_Paper(){
+        id_Card = null;
+        birth_Cert = null;
+        passport = null;
+        visa = null;
+        warning = "";
+    }
     public static void add_Entry(Entry new_Entry) {
         try {
-            JAXBContext context = JAXBContext.newInstance(Entries.class, Entry.class, Identity_Card.class);
+            JAXBContext context = JAXBContext.newInstance(Entry.class, Identity_Card.class);
             System.out.println("Tạo JAXBContext thành công.");
 
-            File file = new File("./data/record.xml");
+            File file = new File("/src/main/java/data/entry.xml");
 
             // Danh sách các Entry hiện có
             List<Entry> entryList;
@@ -71,4 +80,25 @@ public class Controller_Staff {
         add_Entry(entry);
     }
     
+    public static void check_Info_Id_Card(String name, String nation, String dob, boolean isMale){
+        warning = "";
+        if (!name.equals(id_Card.getName())){
+            warning = warning + "Wrong name\n";
+        }
+        if (!nation.equals(id_Card.getNation())){
+            warning = warning + "Wrong nation\n";
+        }        
+        if (!dob.equals(id_Card.getDob())){
+            warning = warning + "Wrong birthday\n";
+        }
+        if (isMale!=id_Card.isIsMale()){
+            warning = warning + "Wrong gender\n";
+        }
+        if(warning.equals("")){
+            JOptionPane.showMessageDialog(null, "Check completed. Not include wrong infomation", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, warning, "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+    }
 }

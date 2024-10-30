@@ -295,7 +295,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="issue_Day_ComboboxActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 1; i &lt;= 31; i++) {&#xa;    dob_Day_Combobox.addItem(String.format(&quot;%02d&quot;, i));&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 1; i &lt;= 31; i++) {&#xa;    issue_Day_Combobox.addItem(String.format(&quot;%02d&quot;, i));&#xa;}"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
@@ -309,7 +309,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="issue_Month_ComboboxActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 1; i &lt;= 12; i++) {&#xa;    dob_Month_Combobox.addItem(String.format(&quot;%02d&quot;, i));&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 1; i &lt;= 12; i++) {&#xa;    issue_Month_Combobox.addItem(String.format(&quot;%02d&quot;, i));&#xa;}"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
@@ -323,7 +323,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="issue_Year_ComboboxActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 2024; i &gt;= 1900; i--) {&#xa;    dob_Year_Combobox.addItem(String.format(&quot;%d&quot;, i));&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 2024; i &gt;= 1900; i--) {&#xa;    issue_Year_Combobox.addItem(String.format(&quot;%d&quot;, i));&#xa;}"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
@@ -342,7 +342,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exp_Day_ComboboxActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 1; i &lt;= 31; i++) {&#xa;    dob_Day_Combobox.addItem(String.format(&quot;%02d&quot;, i));&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 1; i &lt;= 31; i++) {&#xa;    exp_Day_Combobox.addItem(String.format(&quot;%02d&quot;, i));&#xa;}"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
@@ -356,7 +356,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exp_Month_ComboboxActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 1; i &lt;= 12; i++) {&#xa;    dob_Month_Combobox.addItem(String.format(&quot;%02d&quot;, i));&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 1; i &lt;= 12; i++) {&#xa;    exp_Month_Combobox.addItem(String.format(&quot;%02d&quot;, i));&#xa;}"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
@@ -370,7 +370,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exp_Year_ComboboxActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 2024; i &gt;= 1900; i--) {&#xa;    dob_Year_Combobox.addItem(String.format(&quot;%d&quot;, i));&#xa;}"/>
+        <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="for (int i = 2100; i &gt;= 1900; i--) {&#xa;    exp_Year_Combobox.addItem(String.format(&quot;%d&quot;, i));&#xa;}"/>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>

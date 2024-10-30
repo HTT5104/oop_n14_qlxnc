@@ -159,7 +159,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
 
     issue_Day_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>());
     for (int i = 1; i <= 31; i++) {
-        dob_Day_Combobox.addItem(String.format("%02d", i));
+        issue_Day_Combobox.addItem(String.format("%02d", i));
     }
     issue_Day_Combobox.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,7 +169,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
 
     issue_Month_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>());
     for (int i = 1; i <= 12; i++) {
-        dob_Month_Combobox.addItem(String.format("%02d", i));
+        issue_Month_Combobox.addItem(String.format("%02d", i));
     }
     issue_Month_Combobox.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,7 +179,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
 
     issue_Year_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>());
     for (int i = 2024; i >= 1900; i--) {
-        dob_Year_Combobox.addItem(String.format("%d", i));
+        issue_Year_Combobox.addItem(String.format("%d", i));
     }
     issue_Year_Combobox.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +191,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
 
     exp_Day_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>());
     for (int i = 1; i <= 31; i++) {
-        dob_Day_Combobox.addItem(String.format("%02d", i));
+        exp_Day_Combobox.addItem(String.format("%02d", i));
     }
     exp_Day_Combobox.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,7 +201,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
 
     exp_Month_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>());
     for (int i = 1; i <= 12; i++) {
-        dob_Month_Combobox.addItem(String.format("%02d", i));
+        exp_Month_Combobox.addItem(String.format("%02d", i));
     }
     exp_Month_Combobox.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,8 +210,8 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
     });
 
     exp_Year_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>());
-    for (int i = 2024; i >= 1900; i--) {
-        dob_Year_Combobox.addItem(String.format("%d", i));
+    for (int i = 2100; i >= 1900; i--) {
+        exp_Year_Combobox.addItem(String.format("%d", i));
     }
     exp_Year_Combobox.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
