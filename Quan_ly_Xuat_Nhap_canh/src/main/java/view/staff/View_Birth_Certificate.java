@@ -450,6 +450,10 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
             }
         });
     }
+    
+    public static void run(){
+        new View_Birth_Certificate().setVisible(true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back_Button;

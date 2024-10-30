@@ -503,7 +503,9 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             }
         });
     }
-
+    public static void run(){
+        new View_Visa().setVisible(true);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back_Button;
     private javax.swing.JComboBox<String> dob_Day_Combobox;

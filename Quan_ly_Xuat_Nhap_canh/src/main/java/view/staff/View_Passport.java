@@ -440,7 +440,11 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             }
         });
     }
-
+    
+    public static void run(){
+        new View_Passport().setVisible(true);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back_Button;
     private javax.swing.JTextField code_Field;

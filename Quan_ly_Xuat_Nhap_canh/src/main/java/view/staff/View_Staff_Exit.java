@@ -354,6 +354,10 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             }
         });
     }
+    
+    public static void run(){
+        new View_Staff_Exit().setVisible(true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton accept_Button;

@@ -4,6 +4,8 @@
  */
 package view.staff;
 
+import controller.staff.Controller_Staff;
+import view.staff.View_Id_Card;
 /**
  *
  * @author ADMIN
@@ -157,6 +159,11 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
     });
 
     id_Card_button.setText("Identity Card");
+    id_Card_button.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            id_Card_buttonActionPerformed(evt);
+        }
+    });
 
     birth_Cert_Button.setText("Birth Certificate");
 
@@ -310,6 +317,8 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
 
     private void check_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_ButtonActionPerformed
         // TODO add your handling code here:
+        String dob = (String)dob_Day_Combobox.getSelectedItem() + "/" + (String)dob_Month_Combobox.getSelectedItem() + "/" +(String)dob_Year_Combobox.getSelectedItem();
+        Controller_Staff.save_Temp_Entry_Id_Card(airport_Field.getText(), airport_Id_Field.getText(), flight_Field.getText(), airline_Field.getText(), (int)gate_Spinner.getValue(), name_Field.getText(), (String) nation_Combobox.getSelectedItem(), dob, isMale_Rbutton.isSelected());
     }//GEN-LAST:event_check_ButtonActionPerformed
 
     private void isMale_RbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isMale_RbuttonActionPerformed
@@ -323,6 +332,11 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
     private void accept_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accept_ButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_accept_ButtonActionPerformed
+
+    private void id_Card_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_Card_buttonActionPerformed
+        // TODO add your handling code here:
+        View_Id_Card.run();
+    }//GEN-LAST:event_id_Card_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -357,6 +371,10 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
                 new View_Staff_Entry().setVisible(true);
             }
         });
+    }
+    
+    public static void run(){
+        new View_Staff_Entry().setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

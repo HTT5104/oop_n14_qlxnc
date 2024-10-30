@@ -4,6 +4,7 @@
  */
 package view.staff;
 
+import controller.staff.Controller_Staff;
 /**
  *
  * @author ADMIN
@@ -410,6 +411,10 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
 
     private void save_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_save_ButtonActionPerformed
         // TODO add your handling code here:
+        String dob = (String)dob_Day_Combobox.getSelectedItem() + "/" + (String)dob_Month_Combobox.getSelectedItem() + "/" +(String)dob_Year_Combobox.getSelectedItem();
+        String issue_Date = (String)issue_Day_Combobox.getSelectedItem() + "/" + (String)issue_Month_Combobox.getSelectedItem() + "/" +(String)issue_Year_Combobox.getSelectedItem();
+        String exp = (String)exp_Day_Combobox.getSelectedItem() + "/" + (String)exp_Month_Combobox.getSelectedItem() + "/" +(String)exp_Year_Combobox.getSelectedItem();
+        Controller_Staff.save_Id_Card(id_Field.getText(), name_Field.getText(), dob, isMale_Rbutton.isSelected(), (String) nation_Combobox.getSelectedItem(), origin_Field.getText(), residence_Field.getText(), issue_Date, exp, identification_Field.getText());
     }//GEN-LAST:event_save_ButtonActionPerformed
 
     private void scan_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scan_ButtonActionPerformed
@@ -450,7 +455,11 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             }
         });
     }
-
+    
+    public static void run(){
+        new View_Id_Card().setVisible(true);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back_Button;
     private javax.swing.JComboBox<String> dob_Day_Combobox;
