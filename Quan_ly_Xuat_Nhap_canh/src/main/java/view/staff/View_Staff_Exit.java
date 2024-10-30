@@ -4,18 +4,16 @@
  */
 package view.staff;
 
-import controller.staff.Controller_Staff;
-import view.staff.View_Id_Card;
 /**
  *
  * @author ADMIN
  */
-public class View_Staff_Entry extends javax.swing.JFrame {
+public class View_Staff_Exit extends javax.swing.JFrame {
 
     /**
-     * Creates new form View_Staff_Entry
+     * Creates new form View_Staff_Exit
      */
-    public View_Staff_Entry() {
+    public View_Staff_Exit() {
         initComponents();
     }
 
@@ -28,18 +26,6 @@ public class View_Staff_Entry extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
-        back_Button = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        airport_Field = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        airport_Id_Field = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        flight_Field = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        airline_Field = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         gate_Spinner = new javax.swing.JSpinner();
         jLabel6 = new javax.swing.JLabel();
         name_Field = new javax.swing.JTextField();
@@ -52,28 +38,24 @@ public class View_Staff_Entry extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         check_Button = new javax.swing.JButton();
         isMale_Rbutton = new javax.swing.JRadioButton();
+        back_Button = new javax.swing.JButton();
         id_Card_button = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         birth_Cert_Button = new javax.swing.JButton();
+        airport_Field = new javax.swing.JTextField();
         passport_Button = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         visa_Button = new javax.swing.JButton();
+        airport_Id_Field = new javax.swing.JTextField();
         reject_Button = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         accept_Button = new javax.swing.JButton();
-
-        jScrollPane1.setViewportView(jEditorPane1);
+        flight_Field = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        airline_Field = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        back_Button.setText("Back");
-
-        jLabel1.setText("Airport");
-
-        jLabel2.setText("Airport ID");
-
-        jLabel3.setText("Flight");
-
-        jLabel4.setText("Airline");
-
-        jLabel5.setText("Gate");
 
         jLabel6.setText("Name");
 
@@ -158,16 +140,17 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
+    back_Button.setText("Back");
+
     id_Card_button.setText("Identity Card");
-    id_Card_button.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            id_Card_buttonActionPerformed(evt);
-        }
-    });
+
+    jLabel1.setText("Airport");
 
     birth_Cert_Button.setText("Birth Certificate");
 
     passport_Button.setText("Passport");
+
+    jLabel2.setText("Airport ID");
 
     visa_Button.setText("Visa");
 
@@ -178,12 +161,18 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
+    jLabel3.setText("Flight");
+
     accept_Button.setText("Accept");
     accept_Button.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             accept_ButtonActionPerformed(evt);
         }
     });
+
+    jLabel4.setText("Airline");
+
+    jLabel5.setText("Gate");
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
@@ -317,8 +306,6 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
 
     private void check_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_ButtonActionPerformed
         // TODO add your handling code here:
-        String dob = (String)dob_Day_Combobox.getSelectedItem() + "/" + (String)dob_Month_Combobox.getSelectedItem() + "/" +(String)dob_Year_Combobox.getSelectedItem();
-        Controller_Staff.check_Info_Id_Card(name_Field.getText(), (String) nation_Combobox.getSelectedItem(), dob, isMale_Rbutton.isSelected());
     }//GEN-LAST:event_check_ButtonActionPerformed
 
     private void isMale_RbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isMale_RbuttonActionPerformed
@@ -332,11 +319,6 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
     private void accept_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accept_ButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_accept_ButtonActionPerformed
-
-    private void id_Card_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_Card_buttonActionPerformed
-        // TODO add your handling code here:
-        View_Id_Card.run();
-    }//GEN-LAST:event_id_Card_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -355,27 +337,26 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(View_Staff_Entry.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Staff_Exit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(View_Staff_Entry.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Staff_Exit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(View_Staff_Entry.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Staff_Exit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(View_Staff_Entry.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Staff_Exit.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new View_Staff_Entry().setVisible(true);
+                new View_Staff_Exit().setVisible(true);
             }
         });
     }
     
     public static void run(){
-        new View_Staff_Entry().setVisible(true);
-        Controller_Staff.reset_Paper();
+        new View_Staff_Exit().setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -393,7 +374,6 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JSpinner gate_Spinner;
     private javax.swing.JButton id_Card_button;
     private javax.swing.JRadioButton isMale_Rbutton;
-    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -403,7 +383,6 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField name_Field;
     private javax.swing.JComboBox<String> nation_Combobox;
     private javax.swing.JButton passport_Button;

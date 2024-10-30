@@ -35,7 +35,7 @@ public class View_Login extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jLabel1 = new javax.swing.JLabel();
-        Role = new javax.swing.JComboBox<>();
+        role = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -58,20 +58,20 @@ public class View_Login extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Log in");
 
-        Role.setEditable(true);
-        Role.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manager", "Staff" }));
-        Role.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+        role.setEditable(true);
+        role.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manager", "Staff" }));
+        role.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
-                RolePopupMenuCanceled(evt);
+                rolePopupMenuCanceled(evt);
             }
             public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
             }
             public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
             }
         });
-        Role.addActionListener(new java.awt.event.ActionListener() {
+        role.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RoleActionPerformed(evt);
+                roleActionPerformed(evt);
             }
         });
 
@@ -116,7 +116,7 @@ public class View_Login extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(43, 43, 43)
-                            .addComponent(Role, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(role, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel4)
@@ -135,7 +135,7 @@ public class View_Login extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(Role, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(role, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -157,21 +157,21 @@ public class View_Login extends javax.swing.JFrame {
         
     }//GEN-LAST:event_idActionPerformed
 
-    private void RolePopupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_RolePopupMenuCanceled
+    private void rolePopupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_rolePopupMenuCanceled
         // TODO add your handling code here:
-    }//GEN-LAST:event_RolePopupMenuCanceled
+    }//GEN-LAST:event_rolePopupMenuCanceled
 
-    private void RoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoleActionPerformed
+    private void roleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_RoleActionPerformed
+    }//GEN-LAST:event_roleActionPerformed
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
-        if(String.valueOf(Role.getSelectedItem()).equals("Quản trị viên") && id.getText().equals("22014063") && String.valueOf(password.getPassword()).equals("12345678")){
+        if(String.valueOf(role.getSelectedItem()).equals("Quản trị viên") && id.getText().equals("M123") && String.valueOf(password.getPassword()).equals("123")){
             
         }
         
-        if(String.valueOf(Role.getSelectedItem()).equals("Nhân viên") && id.getText().equals("12345678") && String.valueOf(password.getPassword()).equals("87654321")){
+        if(String.valueOf(role.getSelectedItem()).equals("Nhân viên") && id.getText().equals("S123") && String.valueOf(password.getPassword()).equals("123")){
             
         }
     }//GEN-LAST:event_loginActionPerformed
@@ -215,7 +215,6 @@ public class View_Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> Role;
     private javax.swing.JTextField id;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -227,5 +226,6 @@ public class View_Login extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JButton login;
     private javax.swing.JPasswordField password;
+    private javax.swing.JComboBox<String> role;
     // End of variables declaration//GEN-END:variables
 }
