@@ -1,13 +1,19 @@
+package view.staff;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package View;
+
 
 /**
  *
  * @author admin
  */
+
+import view.staff.View_Staff_Entry;
+import view.staff.View_Staff_Exit;
+
 public class View_Staff extends javax.swing.JFrame {
 
     /**
@@ -26,44 +32,44 @@ public class View_Staff extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        changepass_staff = new javax.swing.JButton();
-        Back_staff = new javax.swing.JButton();
+        entry_Button = new javax.swing.JButton();
+        exit_Button = new javax.swing.JButton();
+        wanted_List_Button = new javax.swing.JButton();
+        change_Pass_Button = new javax.swing.JButton();
+        back_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Nhân viên");
 
-        jButton1.setText("Entry");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        entry_Button.setText("Entry");
+        entry_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                entry_ButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Exit");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        exit_Button.setText("Exit");
+        exit_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                exit_ButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Wanted people list");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        wanted_List_Button.setText("Wanted people list");
+        wanted_List_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                wanted_List_ButtonActionPerformed(evt);
             }
         });
 
-        changepass_staff.setText("Change password");
-        changepass_staff.addActionListener(new java.awt.event.ActionListener() {
+        change_Pass_Button.setText("Change password");
+        change_Pass_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                changepass_staffActionPerformed(evt);
+                change_Pass_ButtonActionPerformed(evt);
             }
         });
 
-        Back_staff.setText("Back");
+        back_Button.setText("Back");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -71,56 +77,60 @@ public class View_Staff extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(changepass_staff)
+                .addComponent(change_Pass_Button)
                 .addGap(21, 21, 21))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(Back_staff))
+                        .addComponent(back_Button))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(151, 151, 151)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(wanted_List_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addComponent(entry_Button, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                                .addComponent(exit_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(Back_staff)
+                .addComponent(back_Button)
                 .addGap(28, 28, 28)
-                .addComponent(jButton1)
+                .addComponent(entry_Button)
                 .addGap(40, 40, 40)
-                .addComponent(jButton2)
+                .addComponent(exit_Button)
                 .addGap(44, 44, 44)
-                .addComponent(jButton3)
+                .addComponent(wanted_List_Button)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                .addComponent(changepass_staff)
+                .addComponent(change_Pass_Button)
                 .addGap(17, 17, 17))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void entry_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entry_ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        dispose();
+        View_Staff_Entry.run();
+    }//GEN-LAST:event_entry_ButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void exit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit_ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        dispose();
+        View_Staff_Exit.run();
+    }//GEN-LAST:event_exit_ButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void wanted_List_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wanted_List_ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_wanted_List_ButtonActionPerformed
 
-    private void changepass_staffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changepass_staffActionPerformed
+    private void change_Pass_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_change_Pass_ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_changepass_staffActionPerformed
+    }//GEN-LAST:event_change_Pass_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,10 +171,10 @@ public class View_Staff extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Back_staff;
-    private javax.swing.JButton changepass_staff;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton back_Button;
+    private javax.swing.JButton change_Pass_Button;
+    private javax.swing.JButton entry_Button;
+    private javax.swing.JButton exit_Button;
+    private javax.swing.JButton wanted_List_Button;
     // End of variables declaration//GEN-END:variables
 }

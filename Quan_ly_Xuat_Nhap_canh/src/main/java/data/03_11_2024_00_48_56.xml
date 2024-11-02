@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<information>
+    <birth_Certificate>
+        <isMale>false</isMale>
+    </birth_Certificate>
+    <entry>
+        <airline></airline>
+        <airport></airport>
+        <airport_Id></airport_Id>
+        <flight></flight>
+        <gate>0</gate>
+        <isForeign>false</isForeign>
+        <isMale>false</isMale>
+        <stay>0</stay>
+    </entry>
+    <identity_Card>
+        <isMale>false</isMale>
+    </identity_Card>
+    <paper>
+        <dob>01012024</dob>
+        <isMale>false</isMale>
+        <name></name>
+        <nation>Afghanistan</nation>
+    </paper>
+    <passport>
+        <dob>01012024</dob>
+        <id>345678</id>
+        <isMale>false</isMale>
+        <name></name>
+        <nation>Afghanistan</nation>
+        <code></code>
+        <exp>nullnullnull</exp>
+        <issue_Date>nullnullnull</issue_Date>
+        <type></type>
+    </passport>
+    <visa>
+        <isMale>false</isMale>
+        <isMultiple>false</isMultiple>
+    </visa>
+</information>

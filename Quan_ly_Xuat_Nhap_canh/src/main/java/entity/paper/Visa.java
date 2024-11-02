@@ -10,15 +10,15 @@ public class Visa extends Paper{
     private String category;
     private String passport_Id;
     private boolean isMultiple;
-    private LocalDate valid_Date;
-    private LocalDate exp;
-    private LocalDate issue_Date;
+    private String valid_Date;
+    private String exp;
+    private String issue_Date;
 
     public Visa() {
     }
     
 
-    public Visa(String category, String passport_Id, boolean isMultiple, LocalDate valid_Date, LocalDate exp, LocalDate issue_Date, String id, String name, String dob, boolean isMale, String nation) {
+    public Visa(String category, String passport_Id, boolean isMultiple, String valid_Date, String exp, String issue_Date, String id, String name, String dob, boolean isMale, String nation) {
         super(id, name, dob, isMale, nation);
         this.category = category;
         this.passport_Id = passport_Id;
@@ -56,29 +56,29 @@ public class Visa extends Paper{
     }
 
     @XmlElement
-    public LocalDate getValid_Date() {
+    public String getValid_Date() {
         return valid_Date;
     }
 
-    public void setValid_Date(LocalDate valid_Date) {
+    public void setValid_Date(String valid_Date) {
         this.valid_Date = valid_Date;
     }
 
     @XmlElement
-    public LocalDate getExp() {
+    public String getExp() {
         return exp;
     }
 
-    public void setExp(LocalDate exp) {
+    public void setExp(String exp) {
         this.exp = exp;
     }
 
     @XmlElement
-    public LocalDate getIssue_Date() {
+    public String getIssue_Date() {
         return issue_Date;
     }
 
-    public void setIssue_Date(LocalDate issue_Date) {
+    public void setIssue_Date(String issue_Date) {
         this.issue_Date = issue_Date;
     }
     

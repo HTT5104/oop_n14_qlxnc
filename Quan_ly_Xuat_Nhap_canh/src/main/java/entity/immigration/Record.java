@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Record {
-    protected LocalDateTime time;
+    protected String time;
     protected String airport;
     protected String airport_Id;
     protected String flight;
@@ -15,15 +15,16 @@ public class Record {
     protected int gate;
     protected String name;
     protected String nation;
-    protected LocalDate dob;
+    protected String dob;
     protected boolean isMale;
     protected boolean isForeign;
 
     public Record() {
     }
+    
 
-    public Record(String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, LocalDate dob, boolean isMale) {
-        this.time = LocalDateTime.now();
+    public Record(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale) {
+        this.time = time;
         this.airport = airport;
         this.airport_Id = airport_Id;
         this.flight = flight;
@@ -99,11 +100,11 @@ public class Record {
     }
 
     @XmlElement
-    public LocalDate getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(LocalDate dob) {
+    public void setDob(String dob) {
         this.dob = dob;
     }
 

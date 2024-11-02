@@ -9,14 +9,10 @@ import javax.xml.bind.annotation.XmlElement;
 public class Identity_Card extends Paper{
     private String origin;
     private String residence;
-    private LocalDate issue_Date;
-    private LocalDate exp;
+    private String issue_Date;
+    private String exp;
     private String identification;
-
-    public Identity_Card() {
-    }
-    
-    public Identity_Card(String id, String name, String dob, boolean isMale, String nation, String origin, String residence, LocalDate issue_Date, LocalDate exp, String identification) {
+    public Identity_Card(String id, String name, String dob, boolean isMale, String nation, String origin, String residence, String issue_Date, String exp, String identification) {
         super(id, name, dob, isMale, nation);
         this.origin = origin;
         this.residence = residence;
@@ -24,6 +20,11 @@ public class Identity_Card extends Paper{
         this.exp = exp;
         this.identification = identification;
     }
+
+    public Identity_Card() {
+    }
+    
+    
 
     @XmlElement
     public String getOrigin() {
@@ -44,20 +45,20 @@ public class Identity_Card extends Paper{
     }
 
     @XmlElement
-    public LocalDate getIssue_Date() {
+    public String getIssue_Date() {
         return issue_Date;
     }
 
-    public void setIssue_Date(LocalDate issue_Date) {
+    public void setIssue_Date(String issue_Date) {
         this.issue_Date = issue_Date;
     }
 
     @XmlElement
-    public LocalDate getExp() {
+    public String getExp() {
         return exp;
     }
 
-    public void setExp(LocalDate exp) {
+    public void setExp(String exp) {
         this.exp = exp;
     }
 

@@ -21,6 +21,7 @@ public class Paper {
         this.isMale = isMale;
         this.nation = nation;
     }
+    
 
     @XmlElement
     public String getId() {
