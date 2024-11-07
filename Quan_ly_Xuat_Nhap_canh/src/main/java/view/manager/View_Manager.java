@@ -154,6 +154,10 @@ public class View_Manager extends javax.swing.JFrame {
             }
         });
     }
+    
+    public static void run() {
+        new View_Manager().setVisible(true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Back_manager;

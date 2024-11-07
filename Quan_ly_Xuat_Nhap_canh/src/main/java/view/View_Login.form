@@ -56,28 +56,28 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="255" max="-2" attributes="0"/>
-              <Component id="login" min="-2" max="-2" attributes="0"/>
+              <Component id="login_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="155" pref="264" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jLabel1" min="-2" pref="247" max="-2" attributes="0"/>
+                  <Component id="login_Frame_Label" min="-2" pref="247" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="jLabel2" min="-2" pref="63" max="-2" attributes="0"/>
+                          <Component id="role_Label" min="-2" pref="63" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          <Component id="role" min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="role_Combobox" min="-2" pref="136" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="password_Label" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="id_Label" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="32" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="id" pref="134" max="32767" attributes="0"/>
-                              <Component id="password" max="32767" attributes="0"/>
+                              <Component id="id_Field" pref="134" max="32767" attributes="0"/>
+                              <Component id="password_Field" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -90,31 +90,31 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <Component id="login_Frame_Label" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="role" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="role_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="role_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="id" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="id_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="id_Field" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="password" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="password_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="password_Field" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-              <Component id="login" min="-2" max="-2" attributes="0"/>
+              <Component id="login_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="82" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="login_Frame_Label">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="18" style="1"/>
@@ -123,7 +123,7 @@
         <Property name="text" type="java.lang.String" value="Log in"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="role">
+    <Component class="javax.swing.JComboBox" name="role_Combobox">
       <Properties>
         <Property name="editable" type="boolean" value="true"/>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -134,14 +134,14 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="popupMenuCanceled" listener="javax.swing.event.PopupMenuListener" parameters="javax.swing.event.PopupMenuEvent" handler="rolePopupMenuCanceled"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="roleActionPerformed"/>
+        <EventHandler event="popupMenuCanceled" listener="javax.swing.event.PopupMenuListener" parameters="javax.swing.event.PopupMenuEvent" handler="role_ComboboxPopupMenuCanceled"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="role_ComboboxActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="role_Label">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
@@ -149,7 +149,7 @@
         <Property name="text" type="java.lang.String" value="Role:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="id_Label">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
@@ -157,7 +157,7 @@
         <Property name="text" type="java.lang.String" value="Id:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="password_Label">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
@@ -165,12 +165,12 @@
         <Property name="text" type="java.lang.String" value="Password"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="id">
+    <Component class="javax.swing.JTextField" name="id_Field">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="idActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="id_FieldActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="login">
+    <Component class="javax.swing.JButton" name="login_Button">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="66" red="33" type="rgb"/>
@@ -182,10 +182,10 @@
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="login_ButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="password">
+    <Component class="javax.swing.JPasswordField" name="password_Field">
     </Component>
   </SubComponents>
 </Form>

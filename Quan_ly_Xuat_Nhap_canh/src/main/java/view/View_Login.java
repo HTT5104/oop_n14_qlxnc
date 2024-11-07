@@ -5,15 +5,18 @@ package view;
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
+import javax.swing.*;
 import view.staff.View_Staff;
-
+import controller.Controller;
+import controller.Md5;
+import view.manager.View_Manager;
 /**
  *
  * @author admin
  */
 public class View_Login extends javax.swing.JFrame {
     public javax.swing.JButton getLoginButton(){
-        return login;
+        return login_Button;
     }
     /**
      * Creates new form DangNhap
@@ -35,14 +38,14 @@ public class View_Login extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        jLabel1 = new javax.swing.JLabel();
-        role = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        id = new javax.swing.JTextField();
-        login = new javax.swing.JButton();
-        password = new javax.swing.JPasswordField();
+        login_Frame_Label = new javax.swing.JLabel();
+        role_Combobox = new javax.swing.JComboBox<>();
+        role_Label = new javax.swing.JLabel();
+        id_Label = new javax.swing.JLabel();
+        password_Label = new javax.swing.JLabel();
+        id_Field = new javax.swing.JTextField();
+        login_Button = new javax.swing.JButton();
+        password_Field = new javax.swing.JPasswordField();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -55,49 +58,49 @@ public class View_Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Đăng nhập");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Log in");
+        login_Frame_Label.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        login_Frame_Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        login_Frame_Label.setText("Log in");
 
-        role.setEditable(true);
-        role.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manager", "Staff" }));
-        role.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+        role_Combobox.setEditable(true);
+        role_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manager", "Staff" }));
+        role_Combobox.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
-                rolePopupMenuCanceled(evt);
+                role_ComboboxPopupMenuCanceled(evt);
             }
             public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
             }
             public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
             }
         });
-        role.addActionListener(new java.awt.event.ActionListener() {
+        role_Combobox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                roleActionPerformed(evt);
+                role_ComboboxActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("Role:");
+        role_Label.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        role_Label.setText("Role:");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Id:");
+        id_Label.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        id_Label.setText("Id:");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("Password");
+        password_Label.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        password_Label.setText("Password");
 
-        id.addActionListener(new java.awt.event.ActionListener() {
+        id_Field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idActionPerformed(evt);
+                id_FieldActionPerformed(evt);
             }
         });
 
-        login.setBackground(new java.awt.Color(51, 102, 255));
-        login.setForeground(new java.awt.Color(255, 255, 255));
-        login.setText("Log in");
-        login.setOpaque(true);
-        login.addActionListener(new java.awt.event.ActionListener() {
+        login_Button.setBackground(new java.awt.Color(51, 102, 255));
+        login_Button.setForeground(new java.awt.Color(255, 255, 255));
+        login_Button.setText("Log in");
+        login_Button.setOpaque(true);
+        login_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginActionPerformed(evt);
+                login_ButtonActionPerformed(evt);
             }
         });
 
@@ -107,76 +110,83 @@ public class View_Login extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(255, 255, 255)
-                .addComponent(login)
+                .addComponent(login_Button)
                 .addGap(155, 264, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(login_Frame_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(role_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(43, 43, 43)
-                            .addComponent(role, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(role_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel3))
+                                .addComponent(password_Label)
+                                .addComponent(id_Label))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(id, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
-                                .addComponent(password)))))
+                                .addComponent(id_Field, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                                .addComponent(password_Field)))))
                 .addGap(175, 175, 175))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel1)
+                .addComponent(login_Frame_Label)
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(role, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(role_Label)
+                    .addComponent(role_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(id_Label)
+                    .addComponent(id_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(password_Label)
+                    .addComponent(password_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
-                .addComponent(login)
+                .addComponent(login_Button)
                 .addContainerGap(82, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
+    private void id_FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_FieldActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_idActionPerformed
+    }//GEN-LAST:event_id_FieldActionPerformed
 
-    private void rolePopupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_rolePopupMenuCanceled
+    private void role_ComboboxPopupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_role_ComboboxPopupMenuCanceled
         // TODO add your handling code here:
-    }//GEN-LAST:event_rolePopupMenuCanceled
+    }//GEN-LAST:event_role_ComboboxPopupMenuCanceled
 
-    private void roleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roleActionPerformed
+    private void role_ComboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_role_ComboboxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_roleActionPerformed
+    }//GEN-LAST:event_role_ComboboxActionPerformed
 
-    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
+    private void login_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_login_ButtonActionPerformed
         // TODO add your handling code here:
-        if(String.valueOf(role.getSelectedItem()).equals("Manager") && id.getText().equals("M123") && String.valueOf(password.getPassword()).equals("123")){
-            
+        switch (Controller.checkLogin(id_Field.getText(), (String)role_Combobox.getSelectedItem(), String.valueOf(password_Field.getPassword()))) {
+            case 1:
+                View_Manager.run();
+                Controller.setTemp_Id(id_Field.getText());
+                dispose();
+                break;
+            case 2:
+                View_Staff.run();
+                Controller.setTemp_Id(id_Field.getText());
+                dispose();
+                break;
+            default:
+                JOptionPane.showMessageDialog(null, "Wrong ID or password", "Warning", JOptionPane.WARNING_MESSAGE);
+                break;
         }
-        
-        if(String.valueOf(role.getSelectedItem()).equals("Staff") && id.getText().equals("S123") && String.valueOf(password.getPassword()).equals("123")){
-            View_Staff.run();
-            dispose();
-        }
-    }//GEN-LAST:event_loginActionPerformed
+    }//GEN-LAST:event_login_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,17 +227,17 @@ public class View_Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField id;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField id_Field;
+    private javax.swing.JLabel id_Label;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JButton login;
-    private javax.swing.JPasswordField password;
-    private javax.swing.JComboBox<String> role;
+    private javax.swing.JButton login_Button;
+    private javax.swing.JLabel login_Frame_Label;
+    private javax.swing.JPasswordField password_Field;
+    private javax.swing.JLabel password_Label;
+    private javax.swing.JComboBox<String> role_Combobox;
+    private javax.swing.JLabel role_Label;
     // End of variables declaration//GEN-END:variables
 }
