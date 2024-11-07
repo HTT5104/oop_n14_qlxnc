@@ -26,27 +26,13 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="back_Button" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="customer_Label" min="-2" pref="72" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="cus_Type_Combobox" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="type_Label" min="-2" pref="72" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="type_Combobox" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="airport_Label" min="-2" pref="72" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="airport_Field" min="-2" pref="200" max="-2" attributes="0"/>
-                          </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="airport_Id_Label" min="-2" pref="72" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -58,43 +44,45 @@
                               <Component id="flight_Field" min="-2" pref="200" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="gate_Label" min="-2" pref="72" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="gate_Spinner" min="-2" pref="200" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="airline_Label" min="-2" pref="72" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="airline_Field" min="-2" pref="200" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="name_Label" min="-2" pref="72" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="name_Field" min="-2" pref="200" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="nation_Label" min="-2" pref="72" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="nation_Combobox" min="-2" pref="200" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="sex_Label" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="dob_Label" min="-2" pref="72" max="-2" attributes="0"/>
-                                  </Group>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="gate_Label" min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Component id="airline_Label" min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Component id="name_Label" alignment="1" min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Component id="nation_Label" min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Component id="sex_Label" min="-2" pref="72" max="-2" attributes="0"/>
+                                  <Component id="dob_Label" min="-2" pref="72" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Component id="nation_Combobox" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="airline_Field" max="32767" attributes="0"/>
+                                      <Component id="gate_Spinner" max="32767" attributes="0"/>
+                                      <Component id="name_Field" min="-2" pref="200" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="isMale_Rbutton" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="dob_Day_Combobox" min="-2" pref="52" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="dob_Month_Combobox" min="-2" pref="52" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="dob_Year_Combobox" min="-2" pref="84" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="isMale_Rbutton" min="-2" pref="200" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                      <Component id="airport_Label" alignment="1" min="-2" pref="72" max="-2" attributes="0"/>
+                                      <Component id="customer_Label" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="type_Label" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="type_Combobox" pref="200" max="32767" attributes="0"/>
+                                  <Component id="cus_Type_Combobox" max="32767" attributes="0"/>
+                                  <Component id="airport_Field" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -155,109 +143,91 @@
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Component id="back_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="reason_Field" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="gate_Spinner" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="gate_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="type_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="type_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="reason_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="name_Field" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="name_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="customer_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cus_Type_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="reason_Field" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="type_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="type_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="reason_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="customer_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="cus_Type_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="airport_Field" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="airport_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="stay_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="stay_Spinner" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="airport_Id_Field" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="airport_Id_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="locate_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="flight_Field" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="flight_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="locate_Field" min="-2" pref="50" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="airline_Field" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="airline_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="id_Card_Field" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="id_Card_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="birth_Cert_Field" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="birth_Cert_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="passport_Field" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="passport_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="airport_Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="airport_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="stay_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="stay_Spinner" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="nation_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="nation_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="sex_Label" min="-2" max="-2" attributes="0"/>
-                          <Component id="isMale_Rbutton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="airport_Id_Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="airport_Id_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="locate_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="dob_Year_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="dob_Month_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="dob_Day_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="dob_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="accept_Button" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="check_Button" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="flight_Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="flight_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="visa_Field" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="visa_Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                  <Component id="locate_Field" min="-2" pref="50" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="airline_Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="airline_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="id_Card_Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="id_Card_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="birth_Cert_Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="birth_Cert_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="gate_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="gate_Spinner" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="passport_Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="passport_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="name_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="name_Field" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="nation_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="nation_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                      <Component id="visa_Field" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="visa_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="isMale_Rbutton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="sex_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="accept_Button" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="check_Button" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dob_Day_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dob_Month_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dob_Year_Combobox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dob_Label" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -440,6 +410,9 @@
           <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(new String[] { &quot;Domestic (ID card)&quot;, &quot;Domestic (Birth cert)&quot;, &quot;Foreign (Non Visa)&quot;, &quot;Foreign (Visa)&quot; })" type="code"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="cus_Type_ComboboxItemStateChanged"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>

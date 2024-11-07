@@ -169,6 +169,10 @@ public class View_Staff extends javax.swing.JFrame {
             }
         });
     }
+    
+    public static void run() {
+        new View_Staff().setVisible(true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back_Button;

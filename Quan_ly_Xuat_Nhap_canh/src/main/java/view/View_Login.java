@@ -5,6 +5,7 @@ package view;
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
+import view.staff.View_Staff;
 
 /**
  *
@@ -167,12 +168,13 @@ public class View_Login extends javax.swing.JFrame {
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
         // TODO add your handling code here:
-        if(String.valueOf(role.getSelectedItem()).equals("Quản trị viên") && id.getText().equals("M123") && String.valueOf(password.getPassword()).equals("123")){
+        if(String.valueOf(role.getSelectedItem()).equals("Manager") && id.getText().equals("M123") && String.valueOf(password.getPassword()).equals("123")){
             
         }
         
-        if(String.valueOf(role.getSelectedItem()).equals("Nhân viên") && id.getText().equals("S123") && String.valueOf(password.getPassword()).equals("123")){
-            
+        if(String.valueOf(role.getSelectedItem()).equals("Staff") && id.getText().equals("S123") && String.valueOf(password.getPassword()).equals("123")){
+            View_Staff.run();
+            dispose();
         }
     }//GEN-LAST:event_loginActionPerformed
 
