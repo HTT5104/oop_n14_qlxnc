@@ -115,6 +115,8 @@ public class View_Manager extends javax.swing.JFrame {
 
     private void staff_List_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staff_List_ButtonActionPerformed
         // TODO add your handling code here:
+        View_Manager_Staff_List.run();
+        dispose();
     }//GEN-LAST:event_staff_List_ButtonActionPerformed
 
     private void wanted_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wanted_ButtonActionPerformed
@@ -165,11 +167,7 @@ public class View_Manager extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new View_Manager().setVisible(true);
-            }
-        });
+        run();
     }
     
     public static void run() {
