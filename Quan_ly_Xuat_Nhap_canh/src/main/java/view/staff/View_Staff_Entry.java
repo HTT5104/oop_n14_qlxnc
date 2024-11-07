@@ -5,7 +5,7 @@
 package view.staff;
 
 import javax.swing.*;
-import controller.staff.Controller_Staff;
+import controller.Controller_Staff;
 import java.time.format.*;
 import java.time.*;
 

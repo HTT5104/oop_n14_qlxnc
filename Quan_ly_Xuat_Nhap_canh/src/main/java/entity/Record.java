@@ -1,4 +1,4 @@
-package entity.immigration;
+package entity;
 
 import java.util.*;
 import java.time.*;
