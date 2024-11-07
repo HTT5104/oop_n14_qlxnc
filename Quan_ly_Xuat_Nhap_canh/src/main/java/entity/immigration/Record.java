@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Record {
     protected String time;
+    protected String type;
     protected String airport;
     protected String airport_Id;
     protected String flight;
@@ -18,23 +19,17 @@ public class Record {
     protected String dob;
     protected boolean isMale;
     protected boolean isForeign;
+    protected int stay;
+    protected String locates;
+    protected String id_Card;
+    protected String birth_Cert;
+    protected String passport;
+    protected String visa;
 
     public Record() {
     }
     
 
-    public Record(String time, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale) {
-        this.time = time;
-        this.airport = airport;
-        this.airport_Id = airport_Id;
-        this.flight = flight;
-        this.airline = airline;
-        this.gate = gate;
-        this.name = name;
-        this.nation = nation;
-        this.dob = dob;
-        this.isMale = isMale;
-    }
 
     @XmlElement
     public String getAirport() {

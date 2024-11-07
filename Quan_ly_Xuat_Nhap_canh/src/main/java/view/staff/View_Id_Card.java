@@ -414,7 +414,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
         String dob = (String)dob_Day_Combobox.getSelectedItem() + "/" + (String)dob_Month_Combobox.getSelectedItem() + "/" +(String)dob_Year_Combobox.getSelectedItem();
         String issue_Date = (String)issue_Day_Combobox.getSelectedItem() + "/" + (String)issue_Month_Combobox.getSelectedItem() + "/" +(String)issue_Year_Combobox.getSelectedItem();
         String exp = (String)exp_Day_Combobox.getSelectedItem() + "/" + (String)exp_Month_Combobox.getSelectedItem() + "/" +(String)exp_Year_Combobox.getSelectedItem();
-        Controller_Staff.save_Id_Card(id_Field.getText(), name_Field.getText(), dob, isMale_Rbutton.isSelected(), (String) nation_Combobox.getSelectedItem(), origin_Field.getText(), residence_Field.getText(), issue_Date, exp, identification_Field.getText());
+        
     }//GEN-LAST:event_save_ButtonActionPerformed
 
     private void scan_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scan_ButtonActionPerformed
