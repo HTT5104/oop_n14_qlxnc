@@ -26,21 +26,21 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="changepass_m" min="-2" max="-2" attributes="0"/>
+              <Component id="change_Password_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="Back_manager" min="-2" max="-2" attributes="0"/>
+                      <Component id="log_Out_Button" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="staff_list" max="32767" attributes="0"/>
-                          <Component id="wanted_people_list" alignment="0" pref="181" max="32767" attributes="0"/>
-                          <Component id="expried_list" alignment="0" max="32767" attributes="0"/>
+                          <Component id="staff_List_Button" max="32767" attributes="0"/>
+                          <Component id="wanted_Button" alignment="0" pref="181" max="32767" attributes="0"/>
+                          <Component id="expried_Button" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -52,22 +52,22 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-              <Component id="Back_manager" min="-2" max="-2" attributes="0"/>
+              <Component id="log_Out_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-              <Component id="staff_list" min="-2" max="-2" attributes="0"/>
+              <Component id="staff_List_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              <Component id="wanted_people_list" min="-2" max="-2" attributes="0"/>
+              <Component id="wanted_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-              <Component id="expried_list" min="-2" max="-2" attributes="0"/>
+              <Component id="expried_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="74" max="32767" attributes="0"/>
-              <Component id="changepass_m" min="-2" max="-2" attributes="0"/>
+              <Component id="change_Password_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="staff_list">
+    <Component class="javax.swing.JButton" name="staff_List_Button">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
@@ -75,10 +75,10 @@
         <Property name="text" type="java.lang.String" value="Staff list"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="staff_listActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="staff_List_ButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="wanted_people_list">
+    <Component class="javax.swing.JButton" name="wanted_Button">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
@@ -86,20 +86,23 @@
         <Property name="text" type="java.lang.String" value="Wanted people list"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wanted_people_listActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wanted_ButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="changepass_m">
+    <Component class="javax.swing.JButton" name="change_Password_Button">
       <Properties>
         <Property name="text" type="java.lang.String" value="Change password"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Back_manager">
+    <Component class="javax.swing.JButton" name="log_Out_Button">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Back"/>
+        <Property name="text" type="java.lang.String" value="Log out"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="log_Out_ButtonActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="expried_list">
+    <Component class="javax.swing.JButton" name="expried_Button">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
@@ -107,7 +110,7 @@
         <Property name="text" type="java.lang.String" value="Expired people list"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="expried_listActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="expried_ButtonActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

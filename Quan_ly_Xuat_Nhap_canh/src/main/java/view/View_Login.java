@@ -174,12 +174,10 @@ public class View_Login extends javax.swing.JFrame {
         switch (Controller.checkLogin(id_Field.getText(), (String)role_Combobox.getSelectedItem(), String.valueOf(password_Field.getPassword()))) {
             case 1:
                 View_Manager.run();
-                Controller.setTemp_Id(id_Field.getText());
                 dispose();
                 break;
             case 2:
                 View_Staff.run();
-                Controller.setTemp_Id(id_Field.getText());
                 dispose();
                 break;
             default:
@@ -224,6 +222,10 @@ public class View_Login extends javax.swing.JFrame {
                 new View_Login().setVisible(true);
             }
         });
+    }
+    
+    public static void run() {
+        new View_Login().setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

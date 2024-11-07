@@ -11,7 +11,11 @@ package view.staff;
  * @author admin
  */
 
+import view.View_Login;
 import view.staff.View_Staff_Entry;
+import controller.Controller;
+import java.awt.event.ActionEvent;
+import javax.swing.JOptionPane;
 
 public class View_Staff extends javax.swing.JFrame {
 
@@ -34,7 +38,11 @@ public class View_Staff extends javax.swing.JFrame {
         entry_Button = new javax.swing.JButton();
         wanted_List_Button = new javax.swing.JButton();
         change_Pass_Button = new javax.swing.JButton();
-        back_Button = new javax.swing.JButton();
+        log_Out_Button = new javax.swing.JButton();
+        id_Label = new javax.swing.JLabel();
+        temp_Id_Label = new javax.swing.JLabel();
+        name_Label = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Nhân viên");
@@ -60,7 +68,20 @@ public class View_Staff extends javax.swing.JFrame {
             }
         });
 
-        back_Button.setText("Back");
+        log_Out_Button.setText("Log out");
+        log_Out_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                log_Out_ButtonActionPerformed(evt);
+            }
+        });
+
+        id_Label.setText("ID:");
+
+        temp_Id_Label.setText(Controller.getTemp_Id());
+
+        name_Label.setText("Name:");
+
+        jLabel2.setText(Controller.getName());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,24 +95,40 @@ public class View_Staff extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(back_Button))
+                        .addComponent(log_Out_Button))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(151, 151, 151)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(wanted_List_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(entry_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(entry_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(name_Label, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                                    .addComponent(id_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(temp_Id_Label, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(back_Button)
-                .addGap(28, 28, 28)
+                .addComponent(log_Out_Button)
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(id_Label)
+                    .addComponent(temp_Id_Label))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(name_Label)
+                    .addComponent(jLabel2))
+                .addGap(72, 72, 72)
                 .addComponent(entry_Button)
-                .addGap(107, 107, 107)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(wanted_List_Button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addComponent(change_Pass_Button)
                 .addGap(17, 17, 17))
         );
@@ -112,6 +149,15 @@ public class View_Staff extends javax.swing.JFrame {
     private void change_Pass_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_change_Pass_ButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_change_Pass_ButtonActionPerformed
+
+    private void log_Out_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_log_Out_ButtonActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this,"Do you want to log out?", "Log out", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (response == JOptionPane.YES_OPTION) {
+            View_Login.run();
+            dispose(); // Đóng cửa sổ hiện tại
+        }
+    }//GEN-LAST:event_log_Out_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,9 +202,13 @@ public class View_Staff extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton back_Button;
     private javax.swing.JButton change_Pass_Button;
     private javax.swing.JButton entry_Button;
+    private javax.swing.JLabel id_Label;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton log_Out_Button;
+    private javax.swing.JLabel name_Label;
+    private javax.swing.JLabel temp_Id_Label;
     private javax.swing.JButton wanted_List_Button;
     // End of variables declaration//GEN-END:variables
 }
