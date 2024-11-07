@@ -2,36 +2,78 @@ package entity.immigration;
 
 import java.util.*;
 import java.time.*;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
 public class Record {
-    protected String time;
-    protected String type;
-    protected String airport;
-    protected String airport_Id;
-    protected String flight;
-    protected String airline;
-    protected int gate;
-    protected String name;
-    protected String nation;
-    protected String dob;
-    protected boolean isMale;
-    protected boolean isForeign;
-    protected int stay;
-    protected String locates;
-    protected String id_Card;
-    protected String birth_Cert;
-    protected String passport;
-    protected String visa;
+    private LocalDateTime time;
+    private String type;
+    private String type_customer;
+    private String airport;
+    private String airport_Id;
+    private String flight;
+    private String airline;
+    private int gate;
+    private String name;
+    private String nation;
+    private String dob;
+    private boolean isMale;
+    private String reason;
+    private int stay;
+    private String locates;
+    private String id_Card;
+    private String birth_Cert;
+    private String passport;
+    private String visa;
 
     public Record() {
     }
     
+    //Constructor
+    public Record(LocalDateTime time, String type, String type_customer, String airport, String airport_Id, String flight, String airline, int gate, String name, String nation, String dob, boolean isMale, String reason, int stay, String locates, String id_Card, String birth_Cert, String passport, String visa) {
+        this.time = time;
+        this.type = type;
+        this.type_customer = type_customer;
+        this.airport = airport;
+        this.airport_Id = airport_Id;
+        this.flight = flight;
+        this.airline = airline;
+        this.gate = gate;
+        this.name = name;
+        this.nation = nation;
+        this.dob = dob;
+        this.isMale = isMale;
+        this.reason = reason;
+        this.stay = stay;
+        this.locates = locates;
+        this.id_Card = id_Card;
+        this.birth_Cert = birth_Cert;
+        this.passport = passport;
+        this.visa = visa;
+    }
 
+    public LocalDateTime getTime() {
+        return time;
+    }
 
-    @XmlElement
+    public void setTime(LocalDateTime time) {
+        this.time = time;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType_customer() {
+        return type_customer;
+    }
+
+    public void setType_customer(String type_customer) {
+        this.type_customer = type_customer;
+    }
+
     public String getAirport() {
         return airport;
     }
@@ -40,7 +82,6 @@ public class Record {
         this.airport = airport;
     }
 
-    @XmlElement
     public String getAirport_Id() {
         return airport_Id;
     }
@@ -49,7 +90,6 @@ public class Record {
         this.airport_Id = airport_Id;
     }
 
-    @XmlElement
     public String getFlight() {
         return flight;
     }
@@ -58,7 +98,6 @@ public class Record {
         this.flight = flight;
     }
 
-    @XmlElement
     public String getAirline() {
         return airline;
     }
@@ -67,7 +106,6 @@ public class Record {
         this.airline = airline;
     }
 
-    @XmlElement
     public int getGate() {
         return gate;
     }
@@ -76,7 +114,6 @@ public class Record {
         this.gate = gate;
     }
 
-    @XmlElement
     public String getName() {
         return name;
     }
@@ -85,7 +122,6 @@ public class Record {
         this.name = name;
     }
 
-    @XmlElement
     public String getNation() {
         return nation;
     }
@@ -94,7 +130,6 @@ public class Record {
         this.nation = nation;
     }
 
-    @XmlElement
     public String getDob() {
         return dob;
     }
@@ -103,7 +138,6 @@ public class Record {
         this.dob = dob;
     }
 
-    @XmlElement
     public boolean isIsMale() {
         return isMale;
     }
@@ -112,13 +146,60 @@ public class Record {
         this.isMale = isMale;
     }
 
-    @XmlElement
-    public boolean isIsForeign() {
-        return isForeign;
+    public String getReason() {
+        return reason;
     }
 
-    public void setIsForeign(boolean isForeign) {
-        this.isForeign = isForeign;
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    public int getStay() {
+        return stay;
+    }
+
+    public void setStay(int stay) {
+        this.stay = stay;
+    }
+
+    public String getLocates() {
+        return locates;
+    }
+
+    public void setLocates(String locates) {
+        this.locates = locates;
+    }
+
+    public String getId_Card() {
+        return id_Card;
+    }
+
+    public void setId_Card(String id_Card) {
+        this.id_Card = id_Card;
+    }
+
+    public String getBirth_Cert() {
+        return birth_Cert;
+    }
+
+    public void setBirth_Cert(String birth_Cert) {
+        this.birth_Cert = birth_Cert;
+    }
+
+    public String getPassport() {
+        return passport;
+    }
+
+    public void setPassport(String passport) {
+        this.passport = passport;
+    }
+
+    public String getVisa() {
+        return visa;
+    }
+
+    public void setVisa(String visa) {
+        this.visa = visa;
     }
     
 }

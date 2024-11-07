@@ -4,8 +4,9 @@
  */
 package view.staff;
 
+import javax.swing.*;
 import controller.staff.Controller_Staff;
-import view.staff.View_Id_Card;
+
 /**
  *
  * @author ADMIN
@@ -28,54 +29,68 @@ public class View_Staff_Entry extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jEditorPane1 = new javax.swing.JEditorPane();
         back_Button = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        airport_Label = new javax.swing.JLabel();
         airport_Field = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        airport_Id_Label = new javax.swing.JLabel();
         airport_Id_Field = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        flight_Label = new javax.swing.JLabel();
         flight_Field = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        airline_Label = new javax.swing.JLabel();
         airline_Field = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        gate_Label = new javax.swing.JLabel();
         gate_Spinner = new javax.swing.JSpinner();
-        jLabel6 = new javax.swing.JLabel();
+        name_Label = new javax.swing.JLabel();
         name_Field = new javax.swing.JTextField();
         nation_Combobox = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        nation_Label = new javax.swing.JLabel();
+        dob_Label = new javax.swing.JLabel();
         dob_Day_Combobox = new javax.swing.JComboBox<>();
         dob_Month_Combobox = new javax.swing.JComboBox<>();
         dob_Year_Combobox = new javax.swing.JComboBox<>();
-        jLabel9 = new javax.swing.JLabel();
+        sex_Label = new javax.swing.JLabel();
         check_Button = new javax.swing.JButton();
         isMale_Rbutton = new javax.swing.JRadioButton();
-        id_Card_button = new javax.swing.JButton();
-        birth_Cert_Button = new javax.swing.JButton();
-        passport_Button = new javax.swing.JButton();
-        visa_Button = new javax.swing.JButton();
-        reject_Button = new javax.swing.JButton();
         accept_Button = new javax.swing.JButton();
-
-        jScrollPane1.setViewportView(jEditorPane1);
+        type_Label = new javax.swing.JLabel();
+        type_Combobox = new javax.swing.JComboBox<>();
+        customer_Label = new javax.swing.JLabel();
+        cus_Type_Combobox = new javax.swing.JComboBox<>();
+        reason_Label = new javax.swing.JLabel();
+        reason_Field = new javax.swing.JTextField();
+        stay_Label = new javax.swing.JLabel();
+        stay_Spinner = new javax.swing.JSpinner();
+        locate_Label = new javax.swing.JLabel();
+        locate_Field = new javax.swing.JTextField();
+        id_Card_Label = new javax.swing.JLabel();
+        id_Card_Field = new javax.swing.JTextField();
+        birth_Cert_Field = new javax.swing.JTextField();
+        birth_Cert_Label = new javax.swing.JLabel();
+        passport_Field = new javax.swing.JTextField();
+        passport_Label = new javax.swing.JLabel();
+        visa_Label = new javax.swing.JLabel();
+        visa_Field = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                formComponentHidden(evt);
+            }
+        });
 
         back_Button.setText("Back");
 
-        jLabel1.setText("Airport");
+        airport_Label.setText("Airport");
 
-        jLabel2.setText("Airport ID");
+        airport_Id_Label.setText("Airport ID");
 
-        jLabel3.setText("Flight");
+        flight_Label.setText("Flight");
 
-        jLabel4.setText("Airline");
+        airline_Label.setText("Airline");
 
-        jLabel5.setText("Gate");
+        gate_Label.setText("Gate");
 
-        jLabel6.setText("Name");
+        name_Label.setText("Name");
 
         nation_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda",
             "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "The Bahamas", "Bahrain",
@@ -108,9 +123,9 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
     }
     });
 
-    jLabel7.setText("Nation");
+    nation_Label.setText("Nation");
 
-    jLabel8.setText("DoB");
+    dob_Label.setText("DoB");
 
     dob_Day_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>());
     for (int i = 1; i <= 31; i++) {
@@ -142,8 +157,9 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
-    jLabel9.setText("Sex");
+    sex_Label.setText("Sex");
 
+    check_Button.setBackground(new java.awt.Color(255, 255, 153));
     check_Button.setText("Check");
     check_Button.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,30 +174,102 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
         }
     });
 
-    id_Card_button.setText("Identity Card");
-    id_Card_button.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            id_Card_buttonActionPerformed(evt);
-        }
-    });
-
-    birth_Cert_Button.setText("Birth Certificate");
-
-    passport_Button.setText("Passport");
-
-    visa_Button.setText("Visa");
-
-    reject_Button.setText("Reject");
-    reject_Button.addActionListener(new java.awt.event.ActionListener() {
-        public void actionPerformed(java.awt.event.ActionEvent evt) {
-            reject_ButtonActionPerformed(evt);
-        }
-    });
-
+    accept_Button.setBackground(new java.awt.Color(0, 204, 51));
     accept_Button.setText("Accept");
     accept_Button.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             accept_ButtonActionPerformed(evt);
+        }
+    });
+
+    type_Label.setText("Type");
+
+    type_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Entry", "Exit" }));
+    type_Combobox.addItemListener(new java.awt.event.ItemListener() {
+        public void itemStateChanged(java.awt.event.ItemEvent evt) {
+            type_ComboboxItemStateChanged(evt);
+        }
+    });
+    type_Combobox.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            type_ComboboxActionPerformed(evt);
+        }
+    });
+
+    customer_Label.setText("Customer");
+
+    cus_Type_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Domestic (ID card)", "Domestic (Birth cert)", "Foreign (Non Visa)", "Foreign (Visa)" }));
+
+    reason_Label.setText("Reason");
+
+    stay_Label.setText("Stay");
+
+    stay_Spinner.addComponentListener(new java.awt.event.ComponentAdapter() {
+        public void componentHidden(java.awt.event.ComponentEvent evt) {
+            stay_SpinnerComponentHidden(evt);
+        }
+        public void componentShown(java.awt.event.ComponentEvent evt) {
+            stay_SpinnerComponentShown(evt);
+        }
+    });
+
+    locate_Label.setText("Location");
+
+    locate_Field.addComponentListener(new java.awt.event.ComponentAdapter() {
+        public void componentHidden(java.awt.event.ComponentEvent evt) {
+            locate_FieldComponentHidden(evt);
+        }
+        public void componentShown(java.awt.event.ComponentEvent evt) {
+            locate_FieldComponentShown(evt);
+        }
+    });
+
+    id_Card_Label.setText("ID Card");
+
+    id_Card_Field.addComponentListener(new java.awt.event.ComponentAdapter() {
+        public void componentHidden(java.awt.event.ComponentEvent evt) {
+            id_Card_FieldComponentHidden(evt);
+        }
+        public void componentShown(java.awt.event.ComponentEvent evt) {
+            id_Card_FieldComponentShown(evt);
+        }
+    });
+
+    birth_Cert_Field.addComponentListener(new java.awt.event.ComponentAdapter() {
+        public void componentHidden(java.awt.event.ComponentEvent evt) {
+            birth_Cert_FieldComponentHidden(evt);
+        }
+        public void componentShown(java.awt.event.ComponentEvent evt) {
+            birth_Cert_FieldComponentShown(evt);
+        }
+    });
+
+    birth_Cert_Label.setText("Birth cert");
+
+    passport_Field.addComponentListener(new java.awt.event.ComponentAdapter() {
+        public void componentHidden(java.awt.event.ComponentEvent evt) {
+            passport_FieldComponentHidden(evt);
+        }
+        public void componentShown(java.awt.event.ComponentEvent evt) {
+            passport_FieldComponentShown(evt);
+        }
+    });
+
+    passport_Label.setText("Passport");
+
+    visa_Label.setText("Visa");
+
+    visa_Field.addComponentListener(new java.awt.event.ComponentAdapter() {
+        public void componentHidden(java.awt.event.ComponentEvent evt) {
+            visa_FieldComponentHidden(evt);
+        }
+        public void componentShown(java.awt.event.ComponentEvent evt) {
+            visa_FieldComponentShown(evt);
+        }
+    });
+    visa_Field.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            visa_FieldActionPerformed(evt);
         }
     });
 
@@ -193,112 +281,186 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             .addGap(23, 23, 23)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(back_Button)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(nation_Combobox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(airline_Field)
-                        .addComponent(gate_Spinner)
-                        .addComponent(name_Field)
-                        .addComponent(airport_Id_Field)
-                        .addComponent(flight_Field)
+                .addGroup(layout.createSequentialGroup()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(isMale_Rbutton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(customer_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(cus_Type_Combobox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(type_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(type_Combobox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(airport_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(airport_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(airport_Id_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(airport_Id_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(flight_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(flight_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(gate_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(gate_Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(airline_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(airline_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(name_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(name_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(nation_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(nation_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(sex_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(0, 0, Short.MAX_VALUE)
+                                    .addComponent(dob_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
                                     .addComponent(dob_Day_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(dob_Month_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(dob_Year_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(airport_Field, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addGap(0, 0, Short.MAX_VALUE)))
-                    .addGap(75, 75, 75)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(birth_Cert_Button)
-                        .addComponent(id_Card_button, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(passport_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(visa_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(67, 67, 67))))
-        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(accept_Button)
-            .addGap(18, 18, 18)
-            .addComponent(reject_Button)
-            .addGap(18, 18, 18)
-            .addComponent(check_Button)
-            .addGap(34, 34, 34))
+                                .addComponent(isMale_Rbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGap(55, 55, 55)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(reason_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(reason_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(stay_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(stay_Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(locate_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(locate_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(id_Card_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(id_Card_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(birth_Cert_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(birth_Cert_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(passport_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(passport_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(visa_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(visa_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(accept_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(check_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+            .addContainerGap(34, Short.MAX_VALUE))
     );
     layout.setVerticalGroup(
         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(layout.createSequentialGroup()
             .addGap(20, 20, 20)
             .addComponent(back_Button)
-            .addGap(18, 18, 18)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel1)
-                .addComponent(airport_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(id_Card_button))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel2)
-                .addComponent(airport_Id_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel3)
-                .addComponent(flight_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(birth_Cert_Button))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel4)
-                .addComponent(airline_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel5)
-                .addComponent(gate_Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(passport_Button))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabel6)
-                .addComponent(name_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(nation_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabel7)
-                .addComponent(visa_Button))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel8)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dob_Day_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dob_Month_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dob_Year_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(gate_Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(gate_Label))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(name_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(name_Label)))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(reason_Field)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(type_Label)
+                                .addComponent(type_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(reason_Label))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(customer_Label)
+                                .addComponent(cus_Type_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(airport_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(airport_Label)
+                        .addComponent(stay_Label)
+                        .addComponent(stay_Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(airport_Id_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(airport_Id_Label)
+                                .addComponent(locate_Label))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(flight_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(flight_Label)))
+                        .addComponent(locate_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(airline_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(airline_Label)
+                        .addComponent(id_Card_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(id_Card_Label))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(birth_Cert_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(birth_Cert_Label))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(passport_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(passport_Label))
+                    .addGap(1, 1, 1)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel9)
-                .addComponent(isMale_Rbutton))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(check_Button)
-                .addComponent(reject_Button)
-                .addComponent(accept_Button))
-            .addGap(26, 26, 26))
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(7, 7, 7)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(nation_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(nation_Label))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(sex_Label)
+                        .addComponent(isMale_Rbutton))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(dob_Year_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(dob_Month_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(dob_Day_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(dob_Label)
+                        .addComponent(accept_Button)
+                        .addComponent(check_Button))
+                    .addContainerGap(27, Short.MAX_VALUE))
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(8, 8, 8)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(visa_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(visa_Label))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
     );
 
     pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void nation_ComboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nation_ComboboxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nation_ComboboxActionPerformed
@@ -325,19 +487,98 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
         // TODO add your handling code here:
     }//GEN-LAST:event_isMale_RbuttonActionPerformed
 
-    private void reject_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reject_ButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reject_ButtonActionPerformed
-
     private void accept_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accept_ButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_accept_ButtonActionPerformed
 
-    private void id_Card_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_Card_buttonActionPerformed
+    private void visa_FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_visa_FieldActionPerformed
         // TODO add your handling code here:
-        View_Id_Card.run();
-    }//GEN-LAST:event_id_Card_buttonActionPerformed
+    }//GEN-LAST:event_visa_FieldActionPerformed
 
+    private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formComponentHidden
+
+    private void stay_SpinnerComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_stay_SpinnerComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stay_SpinnerComponentHidden
+
+    private void stay_SpinnerComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_stay_SpinnerComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_stay_SpinnerComponentShown
+
+    private void locate_FieldComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_locate_FieldComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_locate_FieldComponentHidden
+
+    private void locate_FieldComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_locate_FieldComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_locate_FieldComponentShown
+
+    private void id_Card_FieldComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_id_Card_FieldComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_id_Card_FieldComponentHidden
+
+    private void id_Card_FieldComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_id_Card_FieldComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_id_Card_FieldComponentShown
+
+    private void birth_Cert_FieldComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_birth_Cert_FieldComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_birth_Cert_FieldComponentHidden
+
+    private void birth_Cert_FieldComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_birth_Cert_FieldComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_birth_Cert_FieldComponentShown
+
+    private void passport_FieldComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_passport_FieldComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passport_FieldComponentHidden
+
+    private void passport_FieldComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_passport_FieldComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passport_FieldComponentShown
+
+    private void visa_FieldComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_visa_FieldComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_visa_FieldComponentHidden
+
+    private void visa_FieldComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_visa_FieldComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_visa_FieldComponentShown
+
+    private void type_ComboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_type_ComboboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_type_ComboboxActionPerformed
+
+    private void type_ComboboxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_type_ComboboxItemStateChanged
+        // TODO add your handling code here:
+        if(type_Combobox.getSelectedItem().equals("Entry")){
+            if(cus_Type_Combobox.getSelectedItem().equals("Domestic (ID card)"));
+            reason_Label.setVisible(true);
+            if(cus_Type_Combobox.getSelectedItem().equals("Domestic (Birth cert)"));
+            if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Non Visa)"));
+            if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Visa)"));
+        }
+        if(type_Combobox.getSelectedItem().equals("Exxit"));
+    }//GEN-LAST:event_type_ComboboxItemStateChanged
+
+    public void hideStart(){
+        reason_Label.setVisible(false);
+        reason_Field.setVisible(false);
+        stay_Label.setVisible(false);
+        stay_Spinner.setVisible(false);
+        locate_Label.setVisible(false);
+        locate_Field.setVisible(false);
+        id_Card_Label.setVisible(false);
+        id_Card_Field.setVisible(false);
+        birth_Cert_Label.setVisible(false);
+        birth_Cert_Field.setVisible(false);
+        passport_Label.setVisible(false);
+        passport_Field.setVisible(false);
+        visa_Label.setVisible(false);
+        visa_Field.setVisible(false);
+    }
     /**
      * @param args the command line arguments
      */
@@ -365,49 +606,56 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
         }
         //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new View_Staff_Entry().setVisible(true);
-            }
-        });
+        run();
     }
     
     public static void run(){
-        new View_Staff_Entry().setVisible(true);
-        Controller_Staff.reset_Paper();
+        View_Staff_Entry frame = new View_Staff_Entry();
+        frame.setVisible(true);
+        frame.hideStart();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton accept_Button;
     private javax.swing.JTextField airline_Field;
+    private javax.swing.JLabel airline_Label;
     private javax.swing.JTextField airport_Field;
     private javax.swing.JTextField airport_Id_Field;
+    private javax.swing.JLabel airport_Id_Label;
+    private javax.swing.JLabel airport_Label;
     private javax.swing.JButton back_Button;
-    private javax.swing.JButton birth_Cert_Button;
+    private javax.swing.JTextField birth_Cert_Field;
+    private javax.swing.JLabel birth_Cert_Label;
     private javax.swing.JButton check_Button;
+    private javax.swing.JComboBox<String> cus_Type_Combobox;
+    private javax.swing.JLabel customer_Label;
     private javax.swing.JComboBox<String> dob_Day_Combobox;
+    private javax.swing.JLabel dob_Label;
     private javax.swing.JComboBox<String> dob_Month_Combobox;
     private javax.swing.JComboBox<String> dob_Year_Combobox;
     private javax.swing.JTextField flight_Field;
+    private javax.swing.JLabel flight_Label;
+    private javax.swing.JLabel gate_Label;
     private javax.swing.JSpinner gate_Spinner;
-    private javax.swing.JButton id_Card_button;
+    private javax.swing.JTextField id_Card_Field;
+    private javax.swing.JLabel id_Card_Label;
     private javax.swing.JRadioButton isMale_Rbutton;
-    private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField locate_Field;
+    private javax.swing.JLabel locate_Label;
     private javax.swing.JTextField name_Field;
+    private javax.swing.JLabel name_Label;
     private javax.swing.JComboBox<String> nation_Combobox;
-    private javax.swing.JButton passport_Button;
-    private javax.swing.JButton reject_Button;
-    private javax.swing.JButton visa_Button;
+    private javax.swing.JLabel nation_Label;
+    private javax.swing.JTextField passport_Field;
+    private javax.swing.JLabel passport_Label;
+    private javax.swing.JTextField reason_Field;
+    private javax.swing.JLabel reason_Label;
+    private javax.swing.JLabel sex_Label;
+    private javax.swing.JLabel stay_Label;
+    private javax.swing.JSpinner stay_Spinner;
+    private javax.swing.JComboBox<String> type_Combobox;
+    private javax.swing.JLabel type_Label;
+    private javax.swing.JTextField visa_Field;
+    private javax.swing.JLabel visa_Label;
     // End of variables declaration//GEN-END:variables
 }
