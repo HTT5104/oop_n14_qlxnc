@@ -12,7 +12,6 @@ package view.staff;
  */
 
 import view.staff.View_Staff_Entry;
-import view.staff.View_Staff_Exit;
 
 public class View_Staff extends javax.swing.JFrame {
 
@@ -33,7 +32,6 @@ public class View_Staff extends javax.swing.JFrame {
     private void initComponents() {
 
         entry_Button = new javax.swing.JButton();
-        exit_Button = new javax.swing.JButton();
         wanted_List_Button = new javax.swing.JButton();
         change_Pass_Button = new javax.swing.JButton();
         back_Button = new javax.swing.JButton();
@@ -45,13 +43,6 @@ public class View_Staff extends javax.swing.JFrame {
         entry_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 entry_ButtonActionPerformed(evt);
-            }
-        });
-
-        exit_Button.setText("Exit");
-        exit_Button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exit_ButtonActionPerformed(evt);
             }
         });
 
@@ -88,9 +79,7 @@ public class View_Staff extends javax.swing.JFrame {
                         .addGap(151, 151, 151)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(wanted_List_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(entry_Button, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                                .addComponent(exit_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                            .addComponent(entry_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -100,9 +89,7 @@ public class View_Staff extends javax.swing.JFrame {
                 .addComponent(back_Button)
                 .addGap(28, 28, 28)
                 .addComponent(entry_Button)
-                .addGap(40, 40, 40)
-                .addComponent(exit_Button)
-                .addGap(44, 44, 44)
+                .addGap(107, 107, 107)
                 .addComponent(wanted_List_Button)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addComponent(change_Pass_Button)
@@ -117,12 +104,6 @@ public class View_Staff extends javax.swing.JFrame {
         dispose();
         View_Staff_Entry.run();
     }//GEN-LAST:event_entry_ButtonActionPerformed
-
-    private void exit_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exit_ButtonActionPerformed
-        // TODO add your handling code here:
-        dispose();
-        View_Staff_Exit.run();
-    }//GEN-LAST:event_exit_ButtonActionPerformed
 
     private void wanted_List_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wanted_List_ButtonActionPerformed
         // TODO add your handling code here:
@@ -178,7 +159,6 @@ public class View_Staff extends javax.swing.JFrame {
     private javax.swing.JButton back_Button;
     private javax.swing.JButton change_Pass_Button;
     private javax.swing.JButton entry_Button;
-    private javax.swing.JButton exit_Button;
     private javax.swing.JButton wanted_List_Button;
     // End of variables declaration//GEN-END:variables
 }

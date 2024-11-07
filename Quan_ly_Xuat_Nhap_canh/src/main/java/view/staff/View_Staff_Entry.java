@@ -6,6 +6,8 @@ package view.staff;
 
 import javax.swing.*;
 import controller.staff.Controller_Staff;
+import java.time.format.*;
+import java.time.*;
 
 /**
  *
@@ -474,6 +476,15 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
 
     private void accept_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accept_ButtonActionPerformed
         // TODO add your handling code here:
+        LocalDateTime timeNow = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        // Chuyển chuỗi sang LocalDateTime
+        String timeNowString = timeNow.format(formatter);
+        
+        String dob = (String)dob_Year_Combobox.getSelectedItem()+"-"+(String)dob_Month_Combobox.getSelectedItem()+"-"+(String)dob_Day_Combobox.getSelectedItem();
+        Controller_Staff.saveRecord(timeNowString, (String)type_Combobox.getSelectedItem(), (String)cus_Type_Combobox.getSelectedItem(), 
+                airport_Field.getText(), airport_Id_Field.getText(), flight_Field.getText(), airline_Field.getText(), (int)gate_Spinner.getValue(), 
+                name_Field.getText(), (String) nation_Combobox.getSelectedItem(), dob, isMale_Rbutton.isEnabled(), reason_Field.getText(), (int)stay_Spinner.getValue(), locate_Field.getText(), id_Card_Field.getText(), birth_Cert_Field.getText(), passport_Field.getText(), visa_Field.getText());
     }//GEN-LAST:event_accept_ButtonActionPerformed
 
     private void visa_FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_visa_FieldActionPerformed

@@ -39,10 +39,7 @@
                       <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="wanted_List_Button" alignment="0" min="-2" pref="195" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="entry_Button" pref="195" max="32767" attributes="0"/>
-                              <Component id="exit_Button" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="entry_Button" min="-2" pref="195" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -57,9 +54,7 @@
               <Component id="back_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Component id="entry_Button" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-              <Component id="exit_Button" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
               <Component id="wanted_List_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="88" max="32767" attributes="0"/>
               <Component id="change_Pass_Button" min="-2" max="-2" attributes="0"/>
@@ -75,14 +70,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="entry_ButtonActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="exit_Button">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Exit"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exit_ButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="wanted_List_Button">
