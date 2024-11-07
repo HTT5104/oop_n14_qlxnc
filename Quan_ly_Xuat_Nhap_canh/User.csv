@@ -1,4 +1,5 @@
-﻿M001,Manager,Ha Tai Thanh,dd4b21e9ef71e1291183a46b913ae6f2
+﻿ID,Role,Name,Password
+M001,Manager,Ha Tai Thanh,dd4b21e9ef71e1291183a46b913ae6f2
 M002,Manager,La Thi Linh,dd4b21e9ef71e1291183a46b913ae6f2
 S001,Staff,Tai Thanh Ha,dd4b21e9ef71e1291183a46b913ae6f2
 S002,Staff,Thi Linh La,dd4b21e9ef71e1291183a46b913ae6f2
