@@ -56,7 +56,7 @@ public class View_Login extends javax.swing.JFrame {
         jMenu2.setText("jMenu2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Đăng nhập");
+        setTitle("Login");
 
         login_Frame_Label.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         login_Frame_Label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

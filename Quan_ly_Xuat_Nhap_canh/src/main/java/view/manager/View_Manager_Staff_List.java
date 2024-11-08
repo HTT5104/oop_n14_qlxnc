@@ -39,6 +39,7 @@ public class View_Manager_Staff_List extends javax.swing.JFrame {
         add_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Staff list");
 
         back_Button.setText("Back");
         back_Button.addActionListener(new java.awt.event.ActionListener() {

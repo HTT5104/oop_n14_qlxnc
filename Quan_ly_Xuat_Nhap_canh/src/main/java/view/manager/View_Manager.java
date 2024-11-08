@@ -1,5 +1,6 @@
 package view.manager;
 
+import controller.Controller;
 import javax.swing.JOptionPane;
 import view.View_Login;
 
@@ -36,9 +37,13 @@ public class View_Manager extends javax.swing.JFrame {
         change_Password_Button = new javax.swing.JButton();
         log_Out_Button = new javax.swing.JButton();
         expried_Button = new javax.swing.JButton();
+        name_Label = new javax.swing.JLabel();
+        temp_Name_Field = new javax.swing.JLabel();
+        id_Label = new javax.swing.JLabel();
+        temp_Id_Label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Quản lý");
+        setTitle("Homepage");
 
         staff_List_Button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         staff_List_Button.setText("Staff list");
@@ -73,6 +78,14 @@ public class View_Manager extends javax.swing.JFrame {
             }
         });
 
+        name_Label.setText("Name:");
+
+        temp_Name_Field.setText(Controller.getName());
+
+        id_Label.setText("ID:");
+
+        temp_Id_Label.setText(Controller.getTemp_Id());
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -82,30 +95,47 @@ public class View_Manager extends javax.swing.JFrame {
                 .addComponent(change_Password_Button)
                 .addGap(21, 21, 21))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(log_Out_Button))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(staff_List_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(wanted_Button, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
-                            .addComponent(expried_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(wanted_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(staff_List_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(25, 25, 25)
+                            .addComponent(log_Out_Button))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(178, 178, 178)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(expried_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(name_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(id_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(temp_Id_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(temp_Name_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(196, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(log_Out_Button)
-                .addGap(58, 58, 58)
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(id_Label)
+                    .addComponent(temp_Id_Label))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(name_Label)
+                    .addComponent(temp_Name_Field))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                 .addComponent(staff_List_Button)
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addComponent(wanted_Button)
-                .addGap(40, 40, 40)
+                .addGap(18, 18, 18)
                 .addComponent(expried_Button)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
                 .addComponent(change_Password_Button)
                 .addGap(24, 24, 24))
         );
@@ -177,8 +207,12 @@ public class View_Manager extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton change_Password_Button;
     private javax.swing.JButton expried_Button;
+    private javax.swing.JLabel id_Label;
     private javax.swing.JButton log_Out_Button;
+    private javax.swing.JLabel name_Label;
     private javax.swing.JButton staff_List_Button;
+    private javax.swing.JLabel temp_Id_Label;
+    private javax.swing.JLabel temp_Name_Field;
     private javax.swing.JButton wanted_Button;
     // End of variables declaration//GEN-END:variables
 }

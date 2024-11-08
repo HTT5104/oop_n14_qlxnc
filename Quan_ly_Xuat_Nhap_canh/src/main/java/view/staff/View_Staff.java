@@ -12,7 +12,7 @@ package view.staff;
  */
 
 import view.View_Login;
-import view.staff.View_Staff_Entry;
+import view.staff.View_Staff_Add_Record;
 import controller.Controller;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
@@ -35,22 +35,22 @@ public class View_Staff extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        entry_Button = new javax.swing.JButton();
+        record_Button = new javax.swing.JButton();
         wanted_List_Button = new javax.swing.JButton();
         change_Pass_Button = new javax.swing.JButton();
         log_Out_Button = new javax.swing.JButton();
         id_Label = new javax.swing.JLabel();
         temp_Id_Label = new javax.swing.JLabel();
         name_Label = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        temp_Name_Field = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Nhân viên");
+        setTitle("Homepage");
 
-        entry_Button.setText("Entry");
-        entry_Button.addActionListener(new java.awt.event.ActionListener() {
+        record_Button.setText("Entry or Exit");
+        record_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                entry_ButtonActionPerformed(evt);
+                record_ButtonActionPerformed(evt);
             }
         });
 
@@ -81,7 +81,7 @@ public class View_Staff extends javax.swing.JFrame {
 
         name_Label.setText("Name:");
 
-        jLabel2.setText(Controller.getName());
+        temp_Name_Field.setText(Controller.getName());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,7 +100,7 @@ public class View_Staff extends javax.swing.JFrame {
                         .addGap(151, 151, 151)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(wanted_List_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(entry_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(record_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(name_Label, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
@@ -108,7 +108,7 @@ public class View_Staff extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(temp_Id_Label, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                    .addComponent(temp_Name_Field, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap(158, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -123,9 +123,9 @@ public class View_Staff extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name_Label)
-                    .addComponent(jLabel2))
+                    .addComponent(temp_Name_Field))
                 .addGap(72, 72, 72)
-                .addComponent(entry_Button)
+                .addComponent(record_Button)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(wanted_List_Button)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
@@ -136,11 +136,11 @@ public class View_Staff extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void entry_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entry_ButtonActionPerformed
+    private void record_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_record_ButtonActionPerformed
         // TODO add your handling code here:
         dispose();
-        View_Staff_Entry.run();
-    }//GEN-LAST:event_entry_ButtonActionPerformed
+        View_Staff_Add_Record.run();
+    }//GEN-LAST:event_record_ButtonActionPerformed
 
     private void wanted_List_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wanted_List_ButtonActionPerformed
         // TODO add your handling code here:
@@ -203,12 +203,12 @@ public class View_Staff extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton change_Pass_Button;
-    private javax.swing.JButton entry_Button;
     private javax.swing.JLabel id_Label;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton log_Out_Button;
     private javax.swing.JLabel name_Label;
+    private javax.swing.JButton record_Button;
     private javax.swing.JLabel temp_Id_Label;
+    private javax.swing.JLabel temp_Name_Field;
     private javax.swing.JButton wanted_List_Button;
     // End of variables declaration//GEN-END:variables
 }

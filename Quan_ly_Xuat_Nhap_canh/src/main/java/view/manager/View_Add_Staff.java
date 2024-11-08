@@ -39,6 +39,7 @@ public class View_Add_Staff extends javax.swing.JFrame {
         name_Field = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Add staff");
 
         role_Combobox.setEditable(true);
         role_Combobox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manager", "Staff" }));
