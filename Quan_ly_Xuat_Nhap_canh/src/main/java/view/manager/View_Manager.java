@@ -151,6 +151,8 @@ public class View_Manager extends javax.swing.JFrame {
 
     private void wanted_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wanted_ButtonActionPerformed
         // TODO add your handling code here:
+        View_Manager_Wanted_List.run();
+        dispose();
     }//GEN-LAST:event_wanted_ButtonActionPerformed
 
     private void expried_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expried_ButtonActionPerformed

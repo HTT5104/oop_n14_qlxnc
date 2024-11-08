@@ -127,4 +127,35 @@ public class Model {
             e.printStackTrace();
         }
     }
+    
+    public static void count_Entry_Exit(String targetNation, String targetPassport) {
+        File file = new File("record.csv");
+        int entryCount = 0;
+        int exitCount = 0;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(",");
+
+                // Kiểm tra xem dòng có đủ cột dữ liệu không
+                if (data.length >= 19) { 
+                    String nation = data[10];       // `nation` ở vị trí 11
+                    String passport = data[16];     // `passport` ở vị trí 17
+                    String type = data[1];          // `type` ở vị trí 2
+
+                    // Kiểm tra nếu nation và passport trùng khớp
+                    if (nation.equals(targetNation) && passport.equals(targetPassport)) {
+                        if (type.equals("Entry")) {
+                            entryCount++;
+                        } else if (type.equals("Exit")) {
+                            exitCount++;
+                        }
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

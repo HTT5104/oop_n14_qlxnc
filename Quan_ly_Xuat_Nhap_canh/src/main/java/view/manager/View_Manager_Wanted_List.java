@@ -5,7 +5,12 @@
 package view.manager;
 
 import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.RowFilter;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 import model.Model;
 
 /**
@@ -14,6 +19,7 @@ import model.Model;
  */
 public class View_Manager_Wanted_List extends javax.swing.JFrame {
     private static DefaultTableModel model;
+    private TableRowSorter<DefaultTableModel> sorter;
     /**
      * Creates new form View_Manager_Wanted_List
      */
@@ -37,8 +43,11 @@ public class View_Manager_Wanted_List extends javax.swing.JFrame {
         wanted_List_Table = new javax.swing.JTable();
         delete_Button = new javax.swing.JButton();
         add_Button = new javax.swing.JButton();
+        filter_Passport_Field = new javax.swing.JTextField();
+        search_Label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("Wanted list"); // NOI18N
 
         update_Button.setText("Update");
         update_Button.addActionListener(new java.awt.event.ActionListener() {
@@ -94,28 +103,34 @@ public class View_Manager_Wanted_List extends javax.swing.JFrame {
             }
         });
 
+        search_Label.setText("Search for passport");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(back_Button)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(wanted_List_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(wanted_List_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(search_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(filter_Passport_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(add_Button)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(delete_Button)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(update_Button)))))
-                .addContainerGap(55, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addComponent(update_Button))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(back_Button)))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,14 +139,18 @@ public class View_Manager_Wanted_List extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(wanted_List_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(back_Button))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(filter_Passport_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(search_Label))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(update_Button)
                     .addComponent(delete_Button)
                     .addComponent(add_Button))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
 
         pack();
@@ -166,6 +185,15 @@ public class View_Manager_Wanted_List extends javax.swing.JFrame {
         View_Add_Wanted.run();
     }//GEN-LAST:event_add_ButtonActionPerformed
 
+    
+    public void applyFilterPassport(String text) {
+        if (text.trim().isEmpty()) {
+            sorter.setRowFilter(null); // Hiện tất cả dữ liệu nếu không có bộ lọc
+        } else {
+            sorter.setRowFilter(RowFilter.regexFilter("(?i)" + text,1)); // Lọc dữ liệu khớp với văn bản
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -199,8 +227,29 @@ public class View_Manager_Wanted_List extends javax.swing.JFrame {
     
     
     public static void run() {
-        new View_Manager_Wanted_List().setVisible(true);
+        View_Manager_Wanted_List view = new View_Manager_Wanted_List();
+        view.setVisible(true);
         model  = new DefaultTableModel(new Object[][] {}, new String[] { "Nation", "Passport" });
+        view.sorter = new TableRowSorter<>(model);
+        view.wanted_List_Table.setRowSorter(view.sorter);
+        
+        // Thêm DocumentListener vào filter_TextField
+        view.filter_Passport_Field.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                view.applyFilterPassport(view.filter_Passport_Field.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                view.applyFilterPassport(view.filter_Passport_Field.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                view.applyFilterPassport(view.filter_Passport_Field.getText());
+            }
+        });
     }
     
     
@@ -209,7 +258,9 @@ public class View_Manager_Wanted_List extends javax.swing.JFrame {
     private javax.swing.JButton add_Button;
     private javax.swing.JButton back_Button;
     private javax.swing.JButton delete_Button;
+    private javax.swing.JTextField filter_Passport_Field;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel search_Label;
     private javax.swing.JButton update_Button;
     private javax.swing.JLabel wanted_List_Label;
     private javax.swing.JTable wanted_List_Table;

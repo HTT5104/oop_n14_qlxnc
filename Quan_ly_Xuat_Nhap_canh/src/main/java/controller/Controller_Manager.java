@@ -7,7 +7,9 @@ package controller;
 import java.io.*;
 import java.util.*;
 import javax.swing.JOptionPane;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 import model.Model;
 import view.manager.View_Add_Staff;
 import view.manager.View_Manager_Wanted_List;
@@ -88,5 +90,13 @@ public class Controller_Manager {
             e.printStackTrace();
         }
         return false;
+    }
+    
+    public void applyFilterPassport(TableRowSorter<DefaultTableModel> sorter, String text) {
+        if (text.trim().isEmpty()) {
+            sorter.setRowFilter(null); // Hiện tất cả dữ liệu nếu không có bộ lọc
+        } else {
+            sorter.setRowFilter(RowFilter.regexFilter("(?i)" + text,1)); // Lọc dữ liệu khớp với văn bản
+        }
     }
 }
