@@ -77,7 +77,7 @@ public class Controller_Manager {
     }
     
     // Hàm kiểm tra xem nation và passport có tồn tại không
-    private static boolean isNationAndPassportExists(String nation, String passport, File file) {
+    public static boolean isNationAndPassportExists(String nation, String passport, File file) {
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = reader.readLine()) != null) {
@@ -92,7 +92,7 @@ public class Controller_Manager {
         return false;
     }
     
-    public void applyFilterPassport(TableRowSorter<DefaultTableModel> sorter, String text) {
+    public static void applyFilterPassport(TableRowSorter<DefaultTableModel> sorter, String text) {
         if (text.trim().isEmpty()) {
             sorter.setRowFilter(null); // Hiện tất cả dữ liệu nếu không có bộ lọc
         } else {

@@ -14,19 +14,22 @@ import javax.xml.bind.*;
 public class Controller_Staff {
     private static String warning;
     
-    public static boolean CheckInfo(int gate, String strDob, int stay){
+    public static boolean CheckInfo(String type, String cus_Type, int gate, String strDob, int stay, String nation, String passport){
         warning = "";
         if(gate<=0){
-            warning = warning + "Invalid gate";
+            warning = warning + "\nInvalid gate";
         }
         if(Controller.isValidDate(strDob)==false){
-            warning = warning + "Invalid birthday";
+            warning = warning + "\nInvalid birthday";
         }
-        if(stay<=0){
-            warning = warning + "Invalid stay time";
+        if(type.equals("Entry") && (cus_Type.equals("Foreign (Non Visa)") || cus_Type.equals("Foreign (Visa)")) && stay<=0){
+            warning = warning + "\nInvalid stay time";
+        }
+        if(Controller_Manager.isNationAndPassportExists(nation, passport, new File("wanted.csv"))==true){
+            warning = warning + "\nWanted person in "+nation;
         }
         if(!warning.equals("")){
-            JOptionPane.showMessageDialog(null, warning, "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, warning, "Warning", JOptionPane.WARNING_MESSAGE);
             return false;
         }
         else{

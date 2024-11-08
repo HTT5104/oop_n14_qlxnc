@@ -35,6 +35,34 @@ public class Model {
             e.printStackTrace();
         }
     }
+
+    public static DefaultTableModel load_Record_Data(DefaultTableModel model) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("record.csv"))) {
+            String line;
+            reader.readLine(); // Bỏ qua dòng tiêu đề
+
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(",");
+
+                // Đảm bảo mảng data có độ dài là 19 bằng cách thêm "N/A" vào các trường còn thiếu
+                String[] completeData = new String[19];
+                for (int i = 0; i < 19; i++) {
+                    if (i < data.length && data[i] != null && !data[i].trim().isEmpty()) {
+                        completeData[i] = data[i];
+                    } else {
+                        completeData[i] = "N/A"; // Giá trị mặc định nếu dữ liệu rỗng hoặc thiếu
+                    }
+                }
+
+                // Thêm dòng hoàn chỉnh vào model
+                model.addRow(completeData);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return model;
+    }
     
     public static DefaultTableModel load_User_Data(DefaultTableModel model) {
         try (BufferedReader reader = new BufferedReader(new FileReader("User.csv"))) {
