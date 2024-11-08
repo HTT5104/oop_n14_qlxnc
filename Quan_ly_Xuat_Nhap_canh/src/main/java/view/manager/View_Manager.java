@@ -1,5 +1,13 @@
 package view.manager;
 
+import view.Expired_Frame;
+import controller.Controller;
+import entity.Expired_Person;
+import java.util.List;
+import javax.swing.JOptionPane;
+import model.Model;
+import view.View_Login;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -28,40 +36,70 @@ public class View_Manager extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        staff_list = new javax.swing.JButton();
-        wanted_people_list = new javax.swing.JButton();
-        changepass_m = new javax.swing.JButton();
-        Back_manager = new javax.swing.JButton();
-        expried_list = new javax.swing.JButton();
+        staff_List_Button = new javax.swing.JButton();
+        wanted_Button = new javax.swing.JButton();
+        change_Password_Button = new javax.swing.JButton();
+        log_Out_Button = new javax.swing.JButton();
+        expried_Button = new javax.swing.JButton();
+        name_Label = new javax.swing.JLabel();
+        temp_Name_Field = new javax.swing.JLabel();
+        id_Label = new javax.swing.JLabel();
+        temp_Id_Label = new javax.swing.JLabel();
+        record_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Quản lý");
+        setTitle("Homepage");
 
-        staff_list.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        staff_list.setText("Staff list");
-        staff_list.addActionListener(new java.awt.event.ActionListener() {
+        staff_List_Button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        staff_List_Button.setText("Staff list");
+        staff_List_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                staff_listActionPerformed(evt);
+                staff_List_ButtonActionPerformed(evt);
             }
         });
 
-        wanted_people_list.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        wanted_people_list.setText("Wanted people list");
-        wanted_people_list.addActionListener(new java.awt.event.ActionListener() {
+        wanted_Button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        wanted_Button.setText("Wanted people list");
+        wanted_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                wanted_people_listActionPerformed(evt);
+                wanted_ButtonActionPerformed(evt);
             }
         });
 
-        changepass_m.setText("Change password");
-
-        Back_manager.setText("Back");
-
-        expried_list.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        expried_list.setText("Expired people list");
-        expried_list.addActionListener(new java.awt.event.ActionListener() {
+        change_Password_Button.setText("Change password");
+        change_Password_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                expried_listActionPerformed(evt);
+                change_Password_ButtonActionPerformed(evt);
+            }
+        });
+
+        log_Out_Button.setText("Log out");
+        log_Out_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                log_Out_ButtonActionPerformed(evt);
+            }
+        });
+
+        expried_Button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        expried_Button.setText("Expired people list");
+        expried_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                expried_ButtonActionPerformed(evt);
+            }
+        });
+
+        name_Label.setText("Name:");
+
+        temp_Name_Field.setText(Controller.getName());
+
+        id_Label.setText("ID:");
+
+        temp_Id_Label.setText(Controller.getTemp_Id());
+
+        record_Button.setText("Records");
+        record_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                record_ButtonActionPerformed(evt);
             }
         });
 
@@ -71,51 +109,98 @@ public class View_Manager extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(changepass_m)
+                .addComponent(change_Password_Button)
                 .addGap(21, 21, 21))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(25, 25, 25)
-                        .addComponent(Back_manager))
+                        .addComponent(log_Out_Button))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(178, 178, 178)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(staff_list, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(wanted_people_list, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
-                            .addComponent(expried_list, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(210, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(record_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(expried_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(name_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(id_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(temp_Id_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(temp_Name_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(wanted_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(staff_List_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap(207, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(Back_manager)
-                .addGap(58, 58, 58)
-                .addComponent(staff_list)
-                .addGap(34, 34, 34)
-                .addComponent(wanted_people_list)
-                .addGap(40, 40, 40)
-                .addComponent(expried_list)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                .addComponent(changepass_m)
+                .addComponent(log_Out_Button)
+                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(id_Label)
+                    .addComponent(temp_Id_Label))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(name_Label)
+                    .addComponent(temp_Name_Field))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(record_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(staff_List_Button)
+                .addGap(12, 12, 12)
+                .addComponent(wanted_Button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(expried_Button)
+                .addGap(27, 27, 27)
+                .addComponent(change_Password_Button)
                 .addGap(24, 24, 24))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void staff_listActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staff_listActionPerformed
+    private void staff_List_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staff_List_ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_staff_listActionPerformed
+        View_Manager_Staff_List.run();
+        dispose();
+    }//GEN-LAST:event_staff_List_ButtonActionPerformed
 
-    private void wanted_people_listActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wanted_people_listActionPerformed
+    private void wanted_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wanted_ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_wanted_people_listActionPerformed
+        View_Manager_Wanted_List.run();
+        dispose();
+    }//GEN-LAST:event_wanted_ButtonActionPerformed
 
-    private void expried_listActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expried_listActionPerformed
+    private void expried_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expried_ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_expried_listActionPerformed
+        List<Expired_Person> expired_People = Model.getOverdueEntries(); // Lấy danh sách đối tượng quá hạn
+        Expired_Frame.displayExpiredPeople(expired_People);
+
+    }//GEN-LAST:event_expried_ButtonActionPerformed
+
+    private void log_Out_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_log_Out_ButtonActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this,"Do you want to log out?", "Log out", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (response == JOptionPane.YES_OPTION) {
+            View_Login.run();
+            dispose(); // Đóng cửa sổ hiện tại
+        }
+    }//GEN-LAST:event_log_Out_ButtonActionPerformed
+
+    private void record_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_record_ButtonActionPerformed
+        // TODO add your handling code here:
+        View_Filter_Record.run();
+        dispose();
+    }//GEN-LAST:event_record_ButtonActionPerformed
+
+    private void change_Password_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_change_Password_ButtonActionPerformed
+        // TODO add your handling code here:
+        View_Manager_Change_Password.run();
+    }//GEN-LAST:event_change_Password_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,18 +233,23 @@ public class View_Manager extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new View_Manager().setVisible(true);
-            }
-        });
+        run();
+    }
+    
+    public static void run() {
+        new View_Manager().setVisible(true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Back_manager;
-    private javax.swing.JButton changepass_m;
-    private javax.swing.JButton expried_list;
-    private javax.swing.JButton staff_list;
-    private javax.swing.JButton wanted_people_list;
+    private javax.swing.JButton change_Password_Button;
+    private javax.swing.JButton expried_Button;
+    private javax.swing.JLabel id_Label;
+    private javax.swing.JButton log_Out_Button;
+    private javax.swing.JLabel name_Label;
+    private javax.swing.JButton record_Button;
+    private javax.swing.JButton staff_List_Button;
+    private javax.swing.JLabel temp_Id_Label;
+    private javax.swing.JLabel temp_Name_Field;
+    private javax.swing.JButton wanted_Button;
     // End of variables declaration//GEN-END:variables
 }
