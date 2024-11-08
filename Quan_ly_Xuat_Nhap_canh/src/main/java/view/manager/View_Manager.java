@@ -63,6 +63,11 @@ public class View_Manager extends javax.swing.JFrame {
         });
 
         change_Password_Button.setText("Change password");
+        change_Password_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                change_Password_ButtonActionPerformed(evt);
+            }
+        });
 
         log_Out_Button.setText("Log out");
         log_Out_Button.addActionListener(new java.awt.event.ActionListener() {
@@ -184,6 +189,11 @@ public class View_Manager extends javax.swing.JFrame {
         View_Filter_Record.run();
         dispose();
     }//GEN-LAST:event_record_ButtonActionPerformed
+
+    private void change_Password_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_change_Password_ButtonActionPerformed
+        // TODO add your handling code here:
+        View_Manager_Change_Password.run();
+    }//GEN-LAST:event_change_Password_ButtonActionPerformed
 
     /**
      * @param args the command line arguments

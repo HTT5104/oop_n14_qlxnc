@@ -8,6 +8,8 @@ import java.io.*;
 import controller.Md5;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -45,6 +47,58 @@ public class Controller {
             e.printStackTrace();
         }
         return 3; // Đăng nhập thất bại
+    }
+    
+    public static int changePassword(String old_Password, String new_Password, String confirm_Password) { 
+        File file = new File("User.csv");
+        List<String> lines = new ArrayList<>();
+        boolean isUpdated = false;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                if (parts.length >= 4) {
+                    String csvId = parts[0].trim();
+                    String csvPassword = parts[3].trim();
+
+                    // Kiểm tra thông tin đăng nhập
+                    if (temp_Id.equals(csvId)) {
+                        if (Md5.encrypt(old_Password).equals(csvPassword)) {
+                            if (new_Password.equals(confirm_Password)) {
+                                // Cập nhật mật khẩu trong dòng này
+                                parts[3] = Md5.encrypt(new_Password);
+                                line = String.join(",", parts);
+                                isUpdated = true;
+                            } else {
+                                return 2; // Xác nhận mật khẩu không khớp
+                            }
+                        } else {
+                            return 1; // Mật khẩu cũ không đúng
+                        }
+                    }
+                }
+                lines.add(line); // Thêm dòng vào danh sách
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Ghi lại nội dung đã cập nhật vào file
+        if (isUpdated) {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+                for (String updatedLine : lines) {
+                    writer.write(updatedLine);
+                    writer.newLine();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return 0; // Đổi mật khẩu thành công
+        }
+
+        return 3; // Không tìm thấy id
     }
 
     public static boolean isValidDate(String dateStr) {
