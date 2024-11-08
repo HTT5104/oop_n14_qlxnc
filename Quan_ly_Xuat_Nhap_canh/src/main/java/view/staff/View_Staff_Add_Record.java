@@ -468,7 +468,8 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
 
     private void check_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_ButtonActionPerformed
         // TODO add your handling code here:
-        String dob = (String)dob_Day_Combobox.getSelectedItem() + "/" + (String)dob_Month_Combobox.getSelectedItem() + "/" +(String)dob_Year_Combobox.getSelectedItem();
+        String dob = (String)dob_Year_Combobox.getSelectedItem()+"-"+(String)dob_Month_Combobox.getSelectedItem()+"-"+(String)dob_Day_Combobox.getSelectedItem();
+        Controller_Staff.CheckInfo((int)gate_Spinner.getValue(), dob, (int)stay_Spinner.getValue());
         
     }//GEN-LAST:event_check_ButtonActionPerformed
 

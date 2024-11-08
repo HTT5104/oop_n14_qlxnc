@@ -6,6 +6,8 @@ package controller;
 
 import java.io.*;
 import controller.Md5;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  *
@@ -45,6 +47,45 @@ public class Controller {
         return 3; // Đăng nhập thất bại
     }
 
+    public static boolean isValidDate(String dateStr) {
+        // Định dạng ngày tháng năm
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        sdf.setLenient(false); // Không cho phép ngày không hợp lệ
+
+        try {
+            // Thử phân tích chuỗi thành ngày tháng năm
+            sdf.parse(dateStr);
+            String[] parts = dateStr.split("-");
+            int day = Integer.parseInt(parts[2]);
+            int month = Integer.parseInt(parts[1]);
+            int year = Integer.parseInt(parts[0]);
+
+            // Kiểm tra số ngày hợp lệ cho từng tháng
+            int[] daysInMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+            // Nếu là năm nhuận và tháng 2 thì có 29 ngày
+            if (isLeapYear(year) && month == 2) {
+                daysInMonth[2] = 29;
+            }
+
+            // Kiểm tra ngày hợp lệ
+            return day >= 1 && day <= daysInMonth[month];
+        } catch (ParseException | NumberFormatException e) {
+            // Nếu có lỗi khi phân tích, nghĩa là ngày không hợp lệ
+            return false;
+        }
+    }
+
+    // Kiểm tra xem năm có phải là năm nhuận không
+    private static boolean isLeapYear(int year) {
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                return year % 400 == 0;
+            }
+            return true;
+        }
+        return false;
+    }
     public static String getTemp_Id() {
         return temp_Id;
     }
