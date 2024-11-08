@@ -44,6 +44,7 @@ public class View_Staff_Wanted_List extends javax.swing.JFrame {
         filter_Passport_Field = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Wanted people list");
 
         back_Button.setText("Back");
         back_Button.addActionListener(new java.awt.event.ActionListener() {

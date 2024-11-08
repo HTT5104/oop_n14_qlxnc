@@ -39,6 +39,7 @@ public class View_Staff_Change_Password extends javax.swing.JFrame {
         confirm_Pass_Field = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Change password");
 
         old_Pass_Label.setText("Old password");
 

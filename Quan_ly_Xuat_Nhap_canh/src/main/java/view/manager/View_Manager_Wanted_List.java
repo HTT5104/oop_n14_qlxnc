@@ -47,6 +47,7 @@ public class View_Manager_Wanted_List extends javax.swing.JFrame {
         search_Label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Wanted people list");
         setName("Wanted list"); // NOI18N
 
         update_Button.setText("Update");
