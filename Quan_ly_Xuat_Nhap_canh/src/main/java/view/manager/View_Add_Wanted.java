@@ -34,7 +34,7 @@ public class View_Add_Wanted extends javax.swing.JFrame {
         add_Button = new javax.swing.JButton();
         nation_Combobox = new javax.swing.JComboBox<>();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         back_Button.setText("Back");
         back_Button.addActionListener(new java.awt.event.ActionListener() {

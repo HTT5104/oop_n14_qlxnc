@@ -1,25 +1,22 @@
-package view.manager;
-
-import controller.Controller;
-import controller.Controller_Manager;
-import javax.swing.JOptionPane;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package view.staff;
 
+import controller.Controller;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author admin
+ * @author ADMIN
  */
-public class View_Manager_Change_Password extends javax.swing.JFrame {
+public class View_Staff_Change_Password extends javax.swing.JFrame {
 
     /**
-     * Creates new form DoiMatKhau
+     * Creates new form View_Staff_Change_Password
      */
-    public View_Manager_Change_Password() {
+    public View_Staff_Change_Password() {
         initComponents();
     }
 
@@ -32,11 +29,7 @@ public class View_Manager_Change_Password extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         old_Pass_Label = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         change_Button = new javax.swing.JButton();
         back_Button = new javax.swing.JButton();
         old_Pass_Field = new javax.swing.JTextField();
@@ -45,14 +38,7 @@ public class View_Manager_Change_Password extends javax.swing.JFrame {
         confirm_Pass_Label = new javax.swing.JLabel();
         confirm_Pass_Field = new javax.swing.JTextField();
 
-        jButton1.setText("jButton1");
-
-        jLabel4.setText("jLabel4");
-
-        jButton4.setText("jButton4");
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Change password");
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         old_Pass_Label.setText("Old password");
 
@@ -79,51 +65,44 @@ public class View_Manager_Change_Password extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(back_Button)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(back_Button))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(113, 113, 113)
+                        .addGap(99, 99, 99)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(new_Pass_Label, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                            .addComponent(new_Pass_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(old_Pass_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(confirm_Pass_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(confirm_Pass_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(26, 26, 26)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(change_Button)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(old_Pass_Field, javax.swing.GroupLayout.DEFAULT_SIZE, 191, Short.MAX_VALUE)
+                                .addComponent(old_Pass_Field)
                                 .addComponent(new_Pass_Field)
-                                .addComponent(confirm_Pass_Field)))))
-                .addContainerGap(135, Short.MAX_VALUE))
+                                .addComponent(confirm_Pass_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(16, 16, 16)
                 .addComponent(back_Button)
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(old_Pass_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(old_Pass_Label))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(new_Pass_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(new_Pass_Label))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(confirm_Pass_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(confirm_Pass_Label))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(new_Pass_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(new_Pass_Label))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(confirm_Pass_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(confirm_Pass_Label))
+                .addGap(18, 18, 18)
                 .addComponent(change_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
@@ -133,17 +112,17 @@ public class View_Manager_Change_Password extends javax.swing.JFrame {
         // TODO add your handling code here:
         switch (Controller.changePassword(old_Pass_Field.getText(), new_Pass_Field.getText(), confirm_Pass_Field.getText())) {
             case 0:
-                JOptionPane.showMessageDialog(null, "Sucess");
-                break;
+            JOptionPane.showMessageDialog(null, "Sucess");
+            break;
             case 1:
-                JOptionPane.showMessageDialog(null, "Old password is not correct", "Error", JOptionPane.ERROR_MESSAGE);
-                break;
+            JOptionPane.showMessageDialog(null, "Old password is not correct", "Error", JOptionPane.ERROR_MESSAGE);
+            break;
             case 2:
-                JOptionPane.showMessageDialog(null, "New password is not confirmed", "Error", JOptionPane.ERROR_MESSAGE);
-                break;
+            JOptionPane.showMessageDialog(null, "New password is not confirmed", "Error", JOptionPane.ERROR_MESSAGE);
+            break;
             default:
-                JOptionPane.showMessageDialog(null, "Not found id", "Error", JOptionPane.ERROR_MESSAGE);
-                break;
+            JOptionPane.showMessageDialog(null, "Not found id", "Error", JOptionPane.ERROR_MESSAGE);
+            break;
         }
     }//GEN-LAST:event_change_ButtonActionPerformed
 
@@ -169,21 +148,14 @@ public class View_Manager_Change_Password extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(View_Manager_Change_Password.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Staff_Change_Password.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(View_Manager_Change_Password.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Staff_Change_Password.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(View_Manager_Change_Password.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Staff_Change_Password.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(View_Manager_Change_Password.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_Staff_Change_Password.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -191,18 +163,13 @@ public class View_Manager_Change_Password extends javax.swing.JFrame {
     }
     
     public static void run() {
-        new View_Manager_Change_Password().setVisible(true);
+        new View_Staff_Change_Password().setVisible(true);
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back_Button;
     private javax.swing.JButton change_Button;
     private javax.swing.JTextField confirm_Pass_Field;
     private javax.swing.JLabel confirm_Pass_Label;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField new_Pass_Field;
     private javax.swing.JLabel new_Pass_Label;
     private javax.swing.JTextField old_Pass_Field;

@@ -150,6 +150,7 @@ public class View_Staff extends javax.swing.JFrame {
 
     private void change_Pass_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_change_Pass_ButtonActionPerformed
         // TODO add your handling code here:
+        View_Staff_Change_Password.run();
     }//GEN-LAST:event_change_Pass_ButtonActionPerformed
 
     private void log_Out_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_log_Out_ButtonActionPerformed
