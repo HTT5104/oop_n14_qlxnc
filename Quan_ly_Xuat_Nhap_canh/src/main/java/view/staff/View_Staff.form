@@ -37,9 +37,9 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="151" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="wanted_List_Button" alignment="0" min="-2" pref="195" max="-2" attributes="0"/>
-                          <Component id="record_Button" min="-2" pref="195" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="wanted_List_Button" alignment="0" pref="195" max="32767" attributes="0"/>
+                          <Component id="record_Button" pref="195" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="name_Label" pref="42" max="32767" attributes="0"/>
@@ -51,6 +51,7 @@
                                   <Component id="temp_Name_Field" max="32767" attributes="0"/>
                               </Group>
                           </Group>
+                          <Component id="expired_Button" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -73,11 +74,13 @@
                   <Component id="name_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="temp_Name_Field" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
               <Component id="record_Button" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="wanted_List_Button" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="77" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="expired_Button" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="42" max="32767" attributes="0"/>
               <Component id="change_Pass_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
           </Group>
@@ -140,6 +143,14 @@
           <Connection code="Controller.getName()" type="code"/>
         </Property>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="expired_Button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Expired people list"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="expired_ButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

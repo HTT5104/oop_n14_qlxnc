@@ -1,7 +1,11 @@
 package view.manager;
 
+import view.Expired_Frame;
 import controller.Controller;
+import entity.Expired_Person;
+import java.util.List;
 import javax.swing.JOptionPane;
+import model.Model;
 import view.View_Login;
 
 /*
@@ -173,6 +177,9 @@ public class View_Manager extends javax.swing.JFrame {
 
     private void expried_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expried_ButtonActionPerformed
         // TODO add your handling code here:
+        List<Expired_Person> expired_People = Model.getOverdueEntries(); // Lấy danh sách đối tượng quá hạn
+        Expired_Frame.displayExpiredPeople(expired_People);
+
     }//GEN-LAST:event_expried_ButtonActionPerformed
 
     private void log_Out_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_log_Out_ButtonActionPerformed
