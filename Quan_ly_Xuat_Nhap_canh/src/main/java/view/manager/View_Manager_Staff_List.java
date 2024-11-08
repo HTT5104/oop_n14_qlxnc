@@ -6,6 +6,7 @@ package view.manager;
 
 import controller.Controller_Manager;
 import javax.swing.table.DefaultTableModel;
+import model.Model;
 
 /**
  *
@@ -140,7 +141,7 @@ public class View_Manager_Staff_List extends javax.swing.JFrame {
     private void update_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_ButtonActionPerformed
         // TODO add your handling code here:
         model.setRowCount(0);
-        model = Controller_Manager.load_User_Data(model);
+        model = Model.load_User_Data(model);
         staff_List_Table.setModel(model); // Cập nhật model của bảng
         
     }//GEN-LAST:event_update_ButtonActionPerformed
@@ -149,9 +150,9 @@ public class View_Manager_Staff_List extends javax.swing.JFrame {
         // TODO add your handling code here:
         int selected_Row = staff_List_Table.getSelectedRow();
         String id = model.getValueAt(selected_Row, 0).toString();
-        Controller_Manager.deleteUserById(id);
+        Model.deleteUserById(id);
         model.setRowCount(0);
-        model = Controller_Manager.load_User_Data(model);
+        model = Model.load_User_Data(model);
         staff_List_Table.setModel(model); // Cập nhật model của bảng
     }//GEN-LAST:event_delete_ButtonActionPerformed
 
