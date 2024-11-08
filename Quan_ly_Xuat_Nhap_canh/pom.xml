@@ -9,7 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
-        <exec.mainClass>group1.quan_ly_xuat_nhap_canh.Quan_ly_Xuat_Nhap_canh</exec.mainClass>
+        <exec.mainClass>quan_ly_xuat_nhap_canh.Quan_ly_Xuat_Nhap_canh</exec.mainClass>
     </properties>
 
     <dependencies>

@@ -10,7 +10,7 @@ import view.View_Login;
  *
  * @author ADMIN
  */
-public class Quan_Ly_Xuat_Nhap_Canh {
+public class Main {
     public static void main(String[] args) {
         View_Login.run();
     }
