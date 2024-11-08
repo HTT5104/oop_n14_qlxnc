@@ -27,24 +27,7 @@ import javax.swing.table.DefaultTableModel;
 public class Model {
     
     private static final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-/*   
-    public static void saveRecord(String time, String type, String type_customer, String airport, String airport_Id, String flight,
-            String airline, int gate, String name, String nation, String dob, boolean isMale, String reason, int stay, String locates,
-            String id_Card, String birth_Cert, String passport, String visa) {
-        File fileToSave = new File("record.csv");
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileToSave, true))) {
-            if (fileToSave.length() > 0) {
-                writer.newLine();  // Chỉ thêm dòng mới nếu file không trống
-            }
-            writer.write(time + "," + type + "," + type_customer + "," + airport + "," + airport_Id + "," + flight + "," + airline
-                    + "," + gate + "," + name + "," + nation + "," + dob + "," + isMale + "," + reason + "," + stay + "," + locates
-                    + "," + id_Card + "," + birth_Cert + "," + passport + "," + visa);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-*/
 public static void saveRecord(String time, String type, String type_customer, String airport, String airport_Id, String flight,
         String airline, Integer gate, String name, String nation, String dob, Boolean isMale, String reason, Integer stay, String locates,
         String id_Card, String birth_Cert, String passport, String visa) {
