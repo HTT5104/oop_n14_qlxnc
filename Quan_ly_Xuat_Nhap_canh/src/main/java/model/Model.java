@@ -81,4 +81,50 @@ public class Model {
             e.printStackTrace();
         }
     }
+    
+    public static DefaultTableModel load_Wanted_Data(DefaultTableModel model) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("wanted.csv"))) {
+            String line;
+            reader.readLine(); // Bỏ qua dòng tiêu đề
+
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(",");
+                if (data.length >= 2) {
+                    model.addRow(new Object[] { data[0], data[1] });
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return model;
+    }
+    
+    public static void deleteWanted(String nation, String passport) {
+        File file = new File("Wanted.csv");
+        List<String> lines = new ArrayList<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line = reader.readLine(); // Lưu dòng tiêu đề
+            lines.add(line);
+
+            while ((line = reader.readLine()) != null) {
+                String[] data = line.split(",");
+                if (!(data[0].equals(nation) && data[1].equals(passport))) {  // Bỏ qua dòng có cả nation và passport cần xóa
+                    lines.add(line);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            for (String line : lines) {
+                writer.write(line);
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

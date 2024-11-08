@@ -138,12 +138,14 @@ public class View_Staff extends javax.swing.JFrame {
 
     private void record_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_record_ButtonActionPerformed
         // TODO add your handling code here:
-        dispose();
         View_Staff_Add_Record.run();
+        dispose();
     }//GEN-LAST:event_record_ButtonActionPerformed
 
     private void wanted_List_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wanted_List_ButtonActionPerformed
         // TODO add your handling code here:
+        View_Staff_Wanted_List.run();
+        dispose();
     }//GEN-LAST:event_wanted_List_ButtonActionPerformed
 
     private void change_Pass_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_change_Pass_ButtonActionPerformed

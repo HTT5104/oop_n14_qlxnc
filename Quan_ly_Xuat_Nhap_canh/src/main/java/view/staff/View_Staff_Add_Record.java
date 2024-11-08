@@ -83,6 +83,11 @@ public class View_Staff_Add_Record extends javax.swing.JFrame {
         });
 
         back_Button.setText("Back");
+        back_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                back_ButtonActionPerformed(evt);
+            }
+        });
 
         airport_Label.setText("Airport");
 
@@ -557,6 +562,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Non Visa)")){
                 reason_Label.setVisible(true);
                 reason_Field.setVisible(true);
+                stay_Label.setText("Stay (Month)");
                 stay_Label.setVisible(true);
                 stay_Spinner.setVisible(true);
                 locate_Label.setVisible(false);
@@ -573,6 +579,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Visa)")){
                 reason_Label.setVisible(true);
                 reason_Field.setVisible(true);
+                stay_Label.setText("Stay (Day)");
                 stay_Label.setVisible(true);
                 stay_Spinner.setVisible(true);
                 locate_Label.setVisible(true);
@@ -668,6 +675,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Non Visa)")){
                 reason_Label.setVisible(true);
                 reason_Field.setVisible(true);
+                stay_Label.setText("Stay (Month)");
                 stay_Label.setVisible(true);
                 stay_Spinner.setVisible(true);
                 locate_Label.setVisible(false);
@@ -684,6 +692,7 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Visa)")){
                 reason_Label.setVisible(true);
                 reason_Field.setVisible(true);
+                stay_Label.setText("Stay (Day)");
                 stay_Label.setVisible(true);
                 stay_Spinner.setVisible(true);
                 locate_Label.setVisible(true);
@@ -735,6 +744,12 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             }
         }
     }//GEN-LAST:event_cus_Type_ComboboxItemStateChanged
+
+    private void back_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_ButtonActionPerformed
+        // TODO add your handling code here:
+        View_Staff.run();
+        dispose();
+    }//GEN-LAST:event_back_ButtonActionPerformed
 
     public void hideStart(){
         reason_Label.setVisible(false);
