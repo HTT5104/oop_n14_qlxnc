@@ -1,0 +1,9 @@
+﻿Time,Type,Customer type,Airport,Airport ID,Flight,Airline,Gate,Name,Nation,Birthday,Male,Reason,Stay time,Locations,ID Card,Birth cert,Passport,Visa
+2024-11-02 03:37:11,Entry,Foreign (Visa),Noi Bai,VN_NB,VN123,Vietnam Airline,2,HTThanh,Vanuatu,2000-01-01,true,Meeting,1,Hanoi,N/A,N/A,123,321
+2024-11-03 03:37:30,Exit,Foreign (Visa),Noi Bai,VN_NB,VN12333,Vietnam Airline,4,HTThanh,Vanuatu,2000-01-01,true,Meeting,1,Hanoi,N/A,N/A,123,321
+2024-11-04 03:37:56,Entry,Foreign (Non Visa),Noi Bai,VN_NB,VN1,Vietnam Airline,4,HTThanh,Vanuatu,2000-01-01,true,Meeting,1,Hanoi,N/A,N/A,123,321
+2024-11-05 03:38:05,Exit,Foreign (Non Visa),Noi Bai,VN_NB,VN144,Vietnam Airline,4,HTThanh,Vanuatu,2000-01-01,true,Meeting,1,Hanoi,N/A,N/A,123,321
+2024-11-06 03:38:21,Entry,Foreign (Visa),Noi Bai,VN_NB,VN111,Vietnam Airline,3,HTThanh,Vanuatu,2000-01-01,true,Meeting,1,Hanoi,N/A,N/A,123,321
+2024-11-09 17:02:01,Entry,Foreign (Non Visa),Tan Son Nhat,VN_TSN,VJ002,Vietjet Air,6,Frank Ribery,France,1983-10-06,true,Tourism,4,N/A,N/A,N/A,777,N/A
+2024-11-09 17:24:14,Entry,Domestic (ID card),Phu Bai,VN_PB,VJ666,Vietjet Air,1,Do My Linh,Vietnam,1975-08-19,false,N/A,0,N/A,6784435,N/A,N/A,N/A
+2024-11-09 17:30:55,Entry,Domestic (ID card),Noi Bai,VN_NB,VN098,Vietnam Airline,3,Doan Thanh Lam,Vietnam,1969-06-19,false,N/A,0,N/A,86345,N/A,N/A,N/A
