@@ -8,7 +8,7 @@
 - Đăng nhập vai trò Staff: (ID: S001, Password: 00000000)
 - Sau khi đăng nhập, ở Trang chủ, bấm vào Record path rồi chọn file CSV lưu trữ danh sách bản ghi xuất nhập cảnh; bấm vào Wanted path rồi chọn file CSV lưu trữ danh sách truy nã.
 - Nút Staff path có chức năng như nút Staff path trước khi đăng nhập nên không nhất thiết phải sử dụng.
-- Trong thư mục nộp sản phẩm, có 3 file CSV cần tải về: User.csv (Dùng cho nút Staff path), record.csv (Dùng cho nút Record path), wanted.csv (Dùng cho nút Wanted path).
+- Trong thư mục nộp sản phẩm, có thư mục data chứa 3 file CSV cần tải về: User.csv (Dùng cho nút Staff path), record.csv (Dùng cho nút Record path), wanted.csv (Dùng cho nút Wanted path).
 
 ## Mạch sự kiện khi sử dụng hệ thống
 
