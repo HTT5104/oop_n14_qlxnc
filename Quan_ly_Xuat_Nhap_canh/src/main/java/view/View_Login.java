@@ -82,13 +82,13 @@ public class View_Login extends javax.swing.JFrame {
             }
         });
 
-        role_Label.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        role_Label.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         role_Label.setText("Role:");
 
-        id_Label.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        id_Label.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         id_Label.setText("Id:");
 
-        password_Label.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        password_Label.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         password_Label.setText("Password");
 
         id_Field.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +118,7 @@ public class View_Login extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(169, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -138,29 +139,32 @@ public class View_Login extends javax.swing.JFrame {
                                 .addComponent(password_Field)))
                         .addComponent(staff_Path_button, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(175, 175, 175))
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(17, 17, 17)
                 .addComponent(login_Frame_Label)
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(role_Label)
                     .addComponent(role_Combobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(id_Label)
-                    .addComponent(id_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(id_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(id_Label))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(password_Label)
                     .addComponent(password_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(login_Button)
                     .addComponent(staff_Path_button))
                 .addContainerGap(82, Short.MAX_VALUE))
+
         );
 
         pack();

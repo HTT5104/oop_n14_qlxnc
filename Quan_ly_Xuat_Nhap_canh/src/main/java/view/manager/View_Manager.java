@@ -54,7 +54,7 @@ public class View_Manager extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Homepage");
 
-        staff_List_Button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        staff_List_Button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         staff_List_Button.setText("Staff list");
         staff_List_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,7 +62,7 @@ public class View_Manager extends javax.swing.JFrame {
             }
         });
 
-        wanted_Button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        wanted_Button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         wanted_Button.setText("Wanted people list");
         wanted_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,7 +84,7 @@ public class View_Manager extends javax.swing.JFrame {
             }
         });
 
-        expried_Button.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        expried_Button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         expried_Button.setText("Expired people list");
         expried_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +100,7 @@ public class View_Manager extends javax.swing.JFrame {
 
         temp_Id_Label.setText(Controller.getTemp_Id());
 
+        record_Button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         record_Button.setText("Records");
         record_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,6 +136,7 @@ public class View_Manager extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(178, 178, 178)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
                     .addComponent(record_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(expried_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -147,6 +149,7 @@ public class View_Manager extends javax.swing.JFrame {
                                 .addComponent(temp_Id_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(temp_Name_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addComponent(wanted_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+
                         .addComponent(staff_List_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(207, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -164,10 +167,12 @@ public class View_Manager extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(record_Path_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(21, 21, 21))
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(log_Out_Button)
@@ -175,6 +180,7 @@ public class View_Manager extends javax.swing.JFrame {
                     .addComponent(staff_Path_button)
                     .addComponent(wanted_Path_Button))
                 .addGap(48, 48, 48)
+
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(id_Label)
                     .addComponent(temp_Id_Label))
@@ -182,7 +188,7 @@ public class View_Manager extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name_Label)
                     .addComponent(temp_Name_Field))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(record_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(staff_List_Button)
@@ -190,9 +196,9 @@ public class View_Manager extends javax.swing.JFrame {
                 .addComponent(wanted_Button)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(expried_Button)
-                .addGap(27, 27, 27)
+                .addGap(33, 33, 33)
                 .addComponent(change_Password_Button)
-                .addGap(24, 24, 24))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
