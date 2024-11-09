@@ -1,12 +1,20 @@
 # Nhóm 1 - Đề 27 - Quản lý xuất nhập cảnh
 
+## Link github: https://github.com/HTT5104/oop_n14_qlxnc
+
+## Lưu ý trước khi sử dụng hệ thống
+### Trước khi đăng nhập, bấm vào Staff path rồi chọn file CSV lưu trữ danh sách nhân sự.
+### Đăng nhập vai trò Manager: (ID: M001, Password: 00000000)
+### Đăng nhập vai trò Staff: (ID: S001, Password: 00000000)
+### Sau khi đăng nhập, ở Trang chủ, bấm vào Record path rồi chọn file CSV lưu trữ danh sách bản ghi xuất nhập cảnh; bấm vào Wanted path rồi chọn file CSV lưu trữ danh sách truy nã.
+### Nút Staff path có chức năng như nút Staff path trước khi đăng nhập nên không nhất thiết phải sử dụng.
+
 ## 1. Phân quyền người dùng
 
 ### 1.1. Quản lý (Manager):
 - Xem các danh sách
 - Thêm, xóa và tìm kiếm các thành phần trong danh sách
 - Đổi mật khẩu
-- Xem thông tin cá nhân (phát triển sau)
 
 ### 1.2. Nhân viên (Staff):
 - Nhập cảnh cho khách hàng
@@ -14,7 +22,6 @@
 - Hiện cảnh bảo khách hàng sai phạm
 - Xem danh sách truy nã
 - Đổi mật khẩu
-- Xem thông tin cá nhân (phát triển sau)
 
 ## 2. Các chức năng
 ### 2.1. Tạo tài khoản
@@ -63,14 +70,8 @@
 ### 3.1. Người dùng
 Định nghĩa cho hai đối tượng được phân quyền: Manager và Staff
 
-### 3.2. Paper
-Mỗi loại giấy tờ của một khách hàng được coi là một đối tượng
-- CCCD
-- Giấy khai sinh
-- Hộ chiếu
-- Visa
-
-### 3.3. Bản ghi
+### 3.2. Bản ghi
 Mỗi bản ghi vào lịch sử xuất nhập cảnh được coi là một đối tượng
-- Nhập cảnh
-- Xuất cảnh
+
+### 3.3. Đối tượng truy nã
+Mỗi đối tượng bị truy nã cần được xác định các thuộc tính cụ thể
