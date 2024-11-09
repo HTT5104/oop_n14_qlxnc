@@ -54,30 +54,31 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                      <Component id="login_Frame_Label" min="-2" pref="180" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="login_Button" min="-2" pref="228" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="role_Label" alignment="0" min="-2" pref="63" max="-2" attributes="0"/>
-                                  <Component id="id_Label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="password_Label" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="role_Combobox" alignment="0" pref="147" max="32767" attributes="0"/>
-                                  <Component id="id_Field" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="password_Field" alignment="0" max="32767" attributes="0"/>
-                              </Group>
+
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="169" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="login_Button" min="-2" max="-2" attributes="0"/>
+                  <Component id="login_Frame_Label" min="-2" pref="247" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="role_Label" min="-2" pref="63" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                          <Component id="role_Combobox" min="-2" pref="136" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="password_Label" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="id_Label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="32" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="id_Field" pref="134" max="32767" attributes="0"/>
+                              <Component id="password_Field" max="32767" attributes="0"/>
+
                           </Group>
                       </Group>
+                      <Component id="staff_Path_button" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="61" max="32767" attributes="0"/>
@@ -104,9 +105,12 @@
                   <Component id="password_Label" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="password_Field" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="login_Button" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="27" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="login_Button" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="staff_Path_button" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="82" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -184,6 +188,14 @@
       </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="password_Field">
+    </Component>
+    <Component class="javax.swing.JButton" name="staff_Path_button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Staff path"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="staff_Path_buttonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

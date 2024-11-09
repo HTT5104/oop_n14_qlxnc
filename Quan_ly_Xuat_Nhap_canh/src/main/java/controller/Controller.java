@@ -10,6 +10,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import model.Model;
 
 /**
  *
@@ -20,7 +21,9 @@ public class Controller {
     private static String temp_Name;
     
     public static int checkLogin(String id, String role, String password) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("User.csv"))) {
+        // Sử dụng ClassLoader để tải file CSV từ classpath
+        File file = new File(Model.getUser_Path());
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
@@ -35,7 +38,7 @@ public class Controller {
                         temp_Name = csvName;
                         return 1;
                     }
-                    
+
                     if (csvId.equals(id) && role.equals("Staff") && csvRole.equals(role) && csvPassword.equals(Md5.encrypt(password))) {
                         temp_Id = id;
                         temp_Name = csvName;
@@ -50,7 +53,7 @@ public class Controller {
     }
     
     public static int changePassword(String old_Password, String new_Password, String confirm_Password) { 
-        File file = new File("User.csv");
+        File file = new File(Model.getUser_Path());
         List<String> lines = new ArrayList<>();
         boolean isUpdated = false;
 

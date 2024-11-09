@@ -3,7 +3,9 @@ package view.manager;
 import view.Expired_Frame;
 import controller.Controller;
 import entity.Expired_Person;
+import java.io.File;
 import java.util.List;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import model.Model;
 import view.View_Login;
@@ -19,7 +21,6 @@ import view.View_Login;
  * @author admin
  */
 public class View_Manager extends javax.swing.JFrame {
-
     /**
      * Creates new form QuanLy
      */
@@ -46,6 +47,9 @@ public class View_Manager extends javax.swing.JFrame {
         id_Label = new javax.swing.JLabel();
         temp_Id_Label = new javax.swing.JLabel();
         record_Button = new javax.swing.JButton();
+        record_Path_Button = new javax.swing.JButton();
+        staff_Path_button = new javax.swing.JButton();
+        wanted_Path_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Homepage");
@@ -104,23 +108,35 @@ public class View_Manager extends javax.swing.JFrame {
             }
         });
 
+        record_Path_Button.setText("Record path");
+        record_Path_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                record_Path_ButtonActionPerformed(evt);
+            }
+        });
+
+        staff_Path_button.setText("Staff path");
+        staff_Path_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staff_Path_buttonActionPerformed(evt);
+            }
+        });
+
+        wanted_Path_Button.setText("Wanted path");
+        wanted_Path_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                wanted_Path_ButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(178, 178, 178)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(log_Out_Button)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(change_Password_Button)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
                     .addComponent(record_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(expried_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -133,15 +149,38 @@ public class View_Manager extends javax.swing.JFrame {
                                 .addComponent(temp_Id_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(temp_Name_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addComponent(wanted_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(staff_List_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(78, Short.MAX_VALUE))
+
+                        .addComponent(staff_List_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(207, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(change_Password_Button))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(log_Out_Button)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(wanted_Path_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(staff_Path_button, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(record_Path_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(21, 21, 21))
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(log_Out_Button)
-                .addGap(32, 32, 32)
+
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(log_Out_Button)
+                    .addComponent(record_Path_Button)
+                    .addComponent(staff_Path_button)
+                    .addComponent(wanted_Path_Button))
+                .addGap(48, 48, 48)
+
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(id_Label)
                     .addComponent(temp_Id_Label))
@@ -204,6 +243,78 @@ public class View_Manager extends javax.swing.JFrame {
         View_Manager_Change_Password.run();
     }//GEN-LAST:event_change_Password_ButtonActionPerformed
 
+    private void record_Path_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_record_Path_ButtonActionPerformed
+        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        
+        // Tùy chọn: Cho phép chọn nhiều tệp hoặc một tệp
+        fileChooser.setMultiSelectionEnabled(false);  // Chỉ chọn một tệp
+
+        // Thiết lập tiêu đề cho hộp thoại chọn tệp
+        fileChooser.setDialogTitle("Chọn tệp CSV");
+
+        // Hiển thị hộp thoại và chờ người dùng chọn
+        int result = fileChooser.showOpenDialog(null);
+        
+        // Nếu người dùng nhấn "Open" thì lấy đường dẫn tệp đã chọn
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            String filePath = selectedFile.getAbsolutePath();  // Lấy đường dẫn tuyệt đối của tệp
+            Model.setRecord_Path(filePath);
+            
+        } else {
+            JOptionPane.showMessageDialog(null, "This file is not suitable", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_record_Path_ButtonActionPerformed
+
+    private void staff_Path_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staff_Path_buttonActionPerformed
+        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        
+        // Tùy chọn: Cho phép chọn nhiều tệp hoặc một tệp
+        fileChooser.setMultiSelectionEnabled(false);  // Chỉ chọn một tệp
+
+        // Thiết lập tiêu đề cho hộp thoại chọn tệp
+        fileChooser.setDialogTitle("Chọn tệp CSV");
+
+        // Hiển thị hộp thoại và chờ người dùng chọn
+        int result = fileChooser.showOpenDialog(null);
+        
+        // Nếu người dùng nhấn "Open" thì lấy đường dẫn tệp đã chọn
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            String filePath = selectedFile.getAbsolutePath();  // Lấy đường dẫn tuyệt đối của tệp
+            Model.setUser_Path(filePath);
+            
+        } else {
+            JOptionPane.showMessageDialog(null, "This file is not suitable", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_staff_Path_buttonActionPerformed
+
+    private void wanted_Path_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wanted_Path_ButtonActionPerformed
+        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        
+        // Tùy chọn: Cho phép chọn nhiều tệp hoặc một tệp
+        fileChooser.setMultiSelectionEnabled(false);  // Chỉ chọn một tệp
+
+        // Thiết lập tiêu đề cho hộp thoại chọn tệp
+        fileChooser.setDialogTitle("Chọn tệp CSV");
+
+        // Hiển thị hộp thoại và chờ người dùng chọn
+        int result = fileChooser.showOpenDialog(null);
+        
+        // Nếu người dùng nhấn "Open" thì lấy đường dẫn tệp đã chọn
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            String filePath = selectedFile.getAbsolutePath();  // Lấy đường dẫn tuyệt đối của tệp
+            Model.setWanted_Path(filePath);
+            
+        } else {
+            JOptionPane.showMessageDialog(null, "This file is not suitable", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_wanted_Path_ButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -241,6 +352,8 @@ public class View_Manager extends javax.swing.JFrame {
     public static void run() {
         new View_Manager().setVisible(true);
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton change_Password_Button;
@@ -249,9 +362,12 @@ public class View_Manager extends javax.swing.JFrame {
     private javax.swing.JButton log_Out_Button;
     private javax.swing.JLabel name_Label;
     private javax.swing.JButton record_Button;
+    private javax.swing.JButton record_Path_Button;
     private javax.swing.JButton staff_List_Button;
+    private javax.swing.JButton staff_Path_button;
     private javax.swing.JLabel temp_Id_Label;
     private javax.swing.JLabel temp_Name_Field;
     private javax.swing.JButton wanted_Button;
+    private javax.swing.JButton wanted_Path_Button;
     // End of variables declaration//GEN-END:variables
 }
