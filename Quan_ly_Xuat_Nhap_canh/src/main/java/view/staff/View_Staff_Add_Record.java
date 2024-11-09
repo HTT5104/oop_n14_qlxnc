@@ -494,8 +494,10 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             Model.saveRecord(timeNowString, (String)type_Combobox.getSelectedItem(), (String)cus_Type_Combobox.getSelectedItem(), 
                 airport_Field.getText(), airport_Id_Field.getText(), flight_Field.getText(), airline_Field.getText(), 
                 (int)gate_Spinner.getValue(), name_Field.getText(), (String) nation_Combobox.getSelectedItem(), dob, 
-                isMale_Rbutton.isEnabled(), reason_Field.getText(), (int)stay_Spinner.getValue(), locate_Field.getText(), 
+                isMale_Rbutton.isSelected(), reason_Field.getText(), (int)stay_Spinner.getValue(), locate_Field.getText(), 
                 id_Card_Field.getText(), birth_Cert_Field.getText(), passport_Field.getText(), visa_Field.getText());
+            dispose();
+            run();
         }
     }//GEN-LAST:event_accept_ButtonActionPerformed
 
@@ -571,14 +573,18 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
                 stay_Spinner.setVisible(true);
                 locate_Label.setVisible(false);
                 locate_Field.setVisible(false);
+                locate_Field.setText(null);
                 id_Card_Label.setVisible(false);
                 id_Card_Field.setVisible(false);
+                id_Card_Field.setText(null);
                 birth_Cert_Label.setVisible(false);
                 birth_Cert_Field.setVisible(false);
+                birth_Cert_Field.setText(null);
                 passport_Label.setVisible(true);
                 passport_Field.setVisible(true);
                 visa_Label.setVisible(false);
                 visa_Field.setVisible(false);
+                visa_Field.setText(null);
             }
             if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Visa)")){
                 reason_Label.setVisible(true);
@@ -590,8 +596,10 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
                 locate_Field.setVisible(true);
                 id_Card_Label.setVisible(false);
                 id_Card_Field.setVisible(false);
+                id_Card_Field.setText(null);
                 birth_Cert_Label.setVisible(false);
                 birth_Cert_Field.setVisible(false);
+                birth_Cert_Field.setText(null);
                 passport_Label.setVisible(true);
                 passport_Field.setVisible(true);
                 visa_Label.setVisible(true);
@@ -604,30 +612,39 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Non Visa)")){
                 reason_Label.setVisible(false);
                 reason_Field.setVisible(false);
+                reason_Field.setText(null);
                 stay_Label.setVisible(false);
                 stay_Spinner.setVisible(false);
                 locate_Label.setVisible(false);
                 locate_Field.setVisible(false);
+                locate_Field.setText(null);
                 id_Card_Label.setVisible(false);
                 id_Card_Field.setVisible(false);
+                id_Card_Field.setText(null);
                 birth_Cert_Label.setVisible(false);
                 birth_Cert_Field.setVisible(false);
+                birth_Cert_Field.setText(null);
                 passport_Label.setVisible(true);
                 passport_Field.setVisible(true);
                 visa_Label.setVisible(false);
                 visa_Field.setVisible(false);
+                visa_Field.setText(null);
             }
             if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Visa)")){
                 reason_Label.setVisible(false);
                 reason_Field.setVisible(false);
+                reason_Field.setText(null);
                 stay_Label.setVisible(false);
                 stay_Spinner.setVisible(false);
                 locate_Label.setVisible(false);
                 locate_Field.setVisible(false);
+                locate_Field.setText(null);
                 id_Card_Label.setVisible(false);
                 id_Card_Field.setVisible(false);
+                id_Card_Field.setText(null);
                 birth_Cert_Label.setVisible(false);
                 birth_Cert_Field.setVisible(false);
+                birth_Cert_Field.setText(null);
                 passport_Label.setVisible(true);
                 passport_Field.setVisible(true);
                 visa_Label.setVisible(true);
@@ -642,36 +659,46 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
         if(cus_Type_Combobox.getSelectedItem().equals("Domestic (ID card)")){
             reason_Label.setVisible(false);
             reason_Field.setVisible(false);
+            reason_Field.setText(null);
             stay_Label.setVisible(false);
             stay_Spinner.setVisible(false);
             locate_Label.setVisible(false);
             locate_Field.setVisible(false);
+            locate_Field.setText(null);
             id_Card_Label.setVisible(true);
             id_Card_Field.setVisible(true);
             birth_Cert_Label.setVisible(false);
             birth_Cert_Field.setVisible(false);
+            birth_Cert_Field.setText(null);
             passport_Label.setVisible(false);
             passport_Field.setVisible(false);
+            passport_Field.setText(null);
             visa_Label.setVisible(false);
             visa_Field.setVisible(false);
+            visa_Field.setText(null);
         }
         
         //Xuất nhập cảnh nội địa bằng giấy khai sinh
         if(cus_Type_Combobox.getSelectedItem().equals("Domestic (Birth cert)")){
             reason_Label.setVisible(false);
             reason_Field.setVisible(false);
+            reason_Field.setText(null);
             stay_Label.setVisible(false);
             stay_Spinner.setVisible(false);
             locate_Label.setVisible(false);
             locate_Field.setVisible(false);
+            locate_Field.setText(null);
             id_Card_Label.setVisible(false);
             id_Card_Field.setVisible(false);
+            id_Card_Field.setText(null);
             birth_Cert_Label.setVisible(true);
             birth_Cert_Field.setVisible(true);
             passport_Label.setVisible(false);
             passport_Field.setVisible(false);
+            passport_Field.setText(null);
             visa_Label.setVisible(false);
             visa_Field.setVisible(false);
+            visa_Field.setText(null);
         }
         
         //Nhập cảnh quốc tế
@@ -684,14 +711,18 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
                 stay_Spinner.setVisible(true);
                 locate_Label.setVisible(false);
                 locate_Field.setVisible(false);
+                locate_Field.setText(null);
                 id_Card_Label.setVisible(false);
                 id_Card_Field.setVisible(false);
+                id_Card_Field.setText(null);
                 birth_Cert_Label.setVisible(false);
                 birth_Cert_Field.setVisible(false);
+                birth_Cert_Field.setText(null);
                 passport_Label.setVisible(true);
                 passport_Field.setVisible(true);
                 visa_Label.setVisible(false);
                 visa_Field.setVisible(false);
+                visa_Field.setText(null);
             }
             if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Visa)")){
                 reason_Label.setVisible(true);
@@ -703,8 +734,10 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
                 locate_Field.setVisible(true);
                 id_Card_Label.setVisible(false);
                 id_Card_Field.setVisible(false);
+                id_Card_Field.setText(null);
                 birth_Cert_Label.setVisible(false);
                 birth_Cert_Field.setVisible(false);
+                birth_Cert_Field.setText(null);
                 passport_Label.setVisible(true);
                 passport_Field.setVisible(true);
                 visa_Label.setVisible(true);
@@ -717,30 +750,39 @@ nation_Combobox.addActionListener(new java.awt.event.ActionListener() {
             if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Non Visa)")){
                 reason_Label.setVisible(false);
                 reason_Field.setVisible(false);
+                reason_Field.setText(null);
                 stay_Label.setVisible(false);
                 stay_Spinner.setVisible(false);
                 locate_Label.setVisible(false);
                 locate_Field.setVisible(false);
+                locate_Field.setText(null);
                 id_Card_Label.setVisible(false);
                 id_Card_Field.setVisible(false);
+                id_Card_Field.setText(null);
                 birth_Cert_Label.setVisible(false);
                 birth_Cert_Field.setVisible(false);
+                birth_Cert_Field.setText(null);
                 passport_Label.setVisible(true);
                 passport_Field.setVisible(true);
                 visa_Label.setVisible(false);
                 visa_Field.setVisible(false);
+                visa_Field.setText(null);
             }
             if(cus_Type_Combobox.getSelectedItem().equals("Foreign (Visa)")){
                 reason_Label.setVisible(false);
                 reason_Field.setVisible(false);
+                reason_Field.setText(null);
                 stay_Label.setVisible(false);
                 stay_Spinner.setVisible(false);
                 locate_Label.setVisible(false);
                 locate_Field.setVisible(false);
+                locate_Field.setText(null);
                 id_Card_Label.setVisible(false);
                 id_Card_Field.setVisible(false);
+                id_Card_Field.setText(null);
                 birth_Cert_Label.setVisible(false);
                 birth_Cert_Field.setVisible(false);
+                birth_Cert_Field.setText(null);
                 passport_Label.setVisible(true);
                 passport_Field.setVisible(true);
                 visa_Label.setVisible(true);
