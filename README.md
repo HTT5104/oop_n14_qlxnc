@@ -2,8 +2,8 @@
 
 ## Link github: https://github.com/HTT5104/oop_n14_qlxnc
 
-## Lưu ý trước khi sử dụng hệ thống
-- Trước khi đăng nhập, bấm vào Staff path rồi chọn file CSV lưu trữ danh sách nhân sự.
+## Lưu ý khi sử dụng hệ thống
+- Trước khi đăng nhập (bấm nút Login), bấm vào Staff path rồi chọn file CSV lưu trữ danh sách nhân sự.
 - Đăng nhập vai trò Manager: (ID: M001, Password: 00000000)
 - Đăng nhập vai trò Staff: (ID: S001, Password: 00000000)
 - Sau khi đăng nhập, ở Trang chủ, bấm vào Record path rồi chọn file CSV lưu trữ danh sách bản ghi xuất nhập cảnh; bấm vào Wanted path rồi chọn file CSV lưu trữ danh sách truy nã.
