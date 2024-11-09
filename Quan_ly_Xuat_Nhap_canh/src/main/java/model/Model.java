@@ -95,6 +95,8 @@ public static void saveRecord(String time, String type, String type_customer, St
         return model;
     }
     
+
+    
     public static DefaultTableModel load_User_Data(DefaultTableModel model) {
         try (BufferedReader reader = new BufferedReader(new FileReader("User.csv"))) {
             String line;
