@@ -37,17 +37,29 @@ public class View_Manager extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Quản lý");
 
+<<<<<<< Updated upstream
         staff_list.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         staff_list.setText("Staff list");
         staff_list.addActionListener(new java.awt.event.ActionListener() {
+=======
+        staff_List_Button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        staff_List_Button.setText("Staff list");
+        staff_List_Button.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> Stashed changes
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 staff_listActionPerformed(evt);
             }
         });
 
+<<<<<<< Updated upstream
         wanted_people_list.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         wanted_people_list.setText("Wanted people list");
         wanted_people_list.addActionListener(new java.awt.event.ActionListener() {
+=======
+        wanted_Button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        wanted_Button.setText("Wanted people list");
+        wanted_Button.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> Stashed changes
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wanted_people_listActionPerformed(evt);
             }
@@ -61,7 +73,42 @@ public class View_Manager extends javax.swing.JFrame {
         expried_list.setText("Expired people list");
         expried_list.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
+<<<<<<< Updated upstream
                 expried_listActionPerformed(evt);
+=======
+                change_Password_ButtonActionPerformed(evt);
+            }
+        });
+
+        log_Out_Button.setText("Log out");
+        log_Out_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                log_Out_ButtonActionPerformed(evt);
+            }
+        });
+
+        expried_Button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        expried_Button.setText("Expired people list");
+        expried_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                expried_ButtonActionPerformed(evt);
+            }
+        });
+
+        name_Label.setText("Name:");
+
+        temp_Name_Field.setText(Controller.getName());
+
+        id_Label.setText("ID:");
+
+        temp_Id_Label.setText(Controller.getTemp_Id());
+
+        record_Button.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        record_Button.setText("Records");
+        record_Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                record_ButtonActionPerformed(evt);
+>>>>>>> Stashed changes
             }
         });
 
@@ -70,6 +117,7 @@ public class View_Manager extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+<<<<<<< Updated upstream
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(changepass_m)
                 .addGap(21, 21, 21))
@@ -85,10 +133,38 @@ public class View_Manager extends javax.swing.JFrame {
                             .addComponent(wanted_people_list, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
                             .addComponent(expried_list, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(210, Short.MAX_VALUE))
+=======
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(change_Password_Button)
+                .addGap(20, 20, 20))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(record_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(expried_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(name_Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(id_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(temp_Name_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(temp_Id_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(wanted_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(staff_List_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(log_Out_Button)))
+                .addContainerGap(155, Short.MAX_VALUE))
+>>>>>>> Stashed changes
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< Updated upstream
                 .addGap(24, 24, 24)
                 .addComponent(Back_manager)
                 .addGap(58, 58, 58)
@@ -100,6 +176,29 @@ public class View_Manager extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                 .addComponent(changepass_m)
                 .addGap(24, 24, 24))
+=======
+                .addGap(15, 15, 15)
+                .addComponent(log_Out_Button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(id_Label)
+                    .addComponent(temp_Id_Label))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(name_Label)
+                    .addComponent(temp_Name_Field))
+                .addGap(18, 18, 18)
+                .addComponent(record_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(staff_List_Button)
+                .addGap(13, 13, 13)
+                .addComponent(wanted_Button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(expried_Button)
+                .addGap(50, 50, 50)
+                .addComponent(change_Password_Button)
+                .addGap(21, 21, 21))
+>>>>>>> Stashed changes
         );
 
         pack();

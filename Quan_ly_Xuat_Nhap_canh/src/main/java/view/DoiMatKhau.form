@@ -42,9 +42,15 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
+<<<<<<< Updated upstream:Quan_ly_Xuat_Nhap_canh/src/main/java/view/DoiMatKhau.form
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Component id="jButton3" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+=======
+              <EmptySpace pref="375" max="32767" attributes="0"/>
+              <Component id="jLabel3" min="-2" pref="37" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+>>>>>>> Stashed changes:Quan_ly_Xuat_Nhap_canh/src/main/java/view/manager/View_Manager_Change_Password.form
           </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
@@ -57,6 +63,7 @@
                       <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
+<<<<<<< Updated upstream:Quan_ly_Xuat_Nhap_canh/src/main/java/view/DoiMatKhau.form
                       <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jLabel3" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
@@ -69,10 +76,32 @@
                           <Component id="jTextField1" pref="191" max="32767" attributes="0"/>
                           <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
+=======
+                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="new_Pass_Label" min="-2" pref="105" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="new_Pass_Field" min="-2" pref="191" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="old_Pass_Label" min="-2" pref="105" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="old_Pass_Field" min="-2" pref="191" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="confirm_Pass_Label" min="-2" pref="105" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="change_Button" min="-2" max="-2" attributes="0"/>
+                                  <Component id="confirm_Pass_Field" min="-2" pref="191" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+>>>>>>> Stashed changes:Quan_ly_Xuat_Nhap_canh/src/main/java/view/manager/View_Manager_Change_Password.form
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="135" max="32767" attributes="0"/>
+              <EmptySpace pref="62" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -104,11 +133,17 @@
                       </Group>
                   </Group>
               </Group>
+<<<<<<< Updated upstream:Quan_ly_Xuat_Nhap_canh/src/main/java/view/DoiMatKhau.form
               <EmptySpace pref="69" max="32767" attributes="0"/>
               <Component id="jButton2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
               <Component id="jButton3" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+=======
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="change_Button" min="-2" pref="23" max="-2" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
+>>>>>>> Stashed changes:Quan_ly_Xuat_Nhap_canh/src/main/java/view/manager/View_Manager_Change_Password.form
           </Group>
       </Group>
     </DimensionLayout>
