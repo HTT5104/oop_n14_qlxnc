@@ -23,7 +23,7 @@ import view.manager.View_Manager_Wanted_List;
  */
 public class Controller_Manager {
     public static void addUser(String id, String role, String name) {
-        File fileToSave = new File("User.csv");
+        File fileToSave = new File(Model.getUser_Path());
 
         // Kiểm tra xem id có tồn tại trong file không
         if (isIdExists(id, fileToSave)) {
@@ -43,7 +43,7 @@ public class Controller_Manager {
     }
 
     public static void addWanted(String nation, String passport) {
-        File fileToSave = new File("wanted.csv");
+        File fileToSave = new File(Model.getWanted_Path());
 
         // Kiểm tra xem id có tồn tại trong file không
         // Kiểm tra xem cặp nation và passport có tồn tại không

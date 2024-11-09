@@ -19,6 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import javax.swing.table.DefaultTableModel;
+import view.manager.View_Manager;
 
 /**
  *
@@ -27,11 +28,38 @@ import javax.swing.table.DefaultTableModel;
 public class Model {
     
     private static final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private static String record_Path;
+    private static String user_Path;
+    private static String wanted_Path;
+
+    public static String getRecord_Path() {
+        return record_Path;
+    }
+
+    public static void setRecord_Path(String record_Path) {
+        Model.record_Path = record_Path;
+    }
+
+    public static String getUser_Path() {
+        return user_Path;
+    }
+
+    public static void setUser_Path(String user_Path) {
+        Model.user_Path = user_Path;
+    }
+
+    public static String getWanted_Path() {
+        return wanted_Path;
+    }
+
+    public static void setWanted_Path(String wanted_Path) {
+        Model.wanted_Path = wanted_Path;
+    }
 
 public static void saveRecord(String time, String type, String type_customer, String airport, String airport_Id, String flight,
         String airline, Integer gate, String name, String nation, String dob, Boolean isMale, String reason, Integer stay, String locates,
         String id_Card, String birth_Cert, String passport, String visa) {
-    File fileToSave = new File("record.csv");
+    File fileToSave = new File(Model.getRecord_Path());
     try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileToSave, true))) {
         if (fileToSave.length() > 0) {
             writer.newLine();  // Chỉ thêm dòng mới nếu file không trống
@@ -68,7 +96,7 @@ public static void saveRecord(String time, String type, String type_customer, St
 }
 
     public static DefaultTableModel load_Record_Data(DefaultTableModel model) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("record.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(Model.getRecord_Path()))) {
             String line;
             reader.readLine(); // Bỏ qua dòng tiêu đề
 
@@ -98,7 +126,7 @@ public static void saveRecord(String time, String type, String type_customer, St
 
     
     public static DefaultTableModel load_User_Data(DefaultTableModel model) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("User.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(Model.getUser_Path()))) {
             String line;
             reader.readLine(); // Bỏ qua dòng tiêu đề
 
@@ -116,7 +144,7 @@ public static void saveRecord(String time, String type, String type_customer, St
     }
     
     public static void deleteUserById(String id) {
-        File file = new File("User.csv");
+        File file = new File(Model.getUser_Path());
         List<String> lines = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
@@ -144,7 +172,7 @@ public static void saveRecord(String time, String type, String type_customer, St
     }
     
     public static DefaultTableModel load_Wanted_Data(DefaultTableModel model) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("wanted.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(Model.getWanted_Path()))) {
             String line;
             reader.readLine(); // Bỏ qua dòng tiêu đề
 
@@ -162,7 +190,7 @@ public static void saveRecord(String time, String type, String type_customer, St
     }
     
     public static void deleteWanted(String nation, String passport) {
-        File file = new File("Wanted.csv");
+        File file = new File(Model.getWanted_Path());
         List<String> lines = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
@@ -194,7 +222,7 @@ public static void saveRecord(String time, String type, String type_customer, St
         Map<String, List<String[]>> recordsMap = new HashMap<>(); // Map để lưu các bản ghi của mỗi khách
 
         // Đọc file CSV và nhóm các bản ghi theo (Nation, Passport)
-        try (BufferedReader reader = new BufferedReader(new FileReader("record.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(Model.getRecord_Path()))) {
             reader.readLine(); // Bỏ qua dòng tiêu đề
             String line;
 
@@ -263,7 +291,7 @@ public static void saveRecord(String time, String type, String type_customer, St
         Map<String, String[]> customerRecords = new HashMap<>();
         Map<String, Integer> entryExitCounts = new HashMap<>();
         
-        try (BufferedReader reader = new BufferedReader(new FileReader("record.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(Model.getRecord_Path()))) {
             String line;
             reader.readLine();  // Bỏ qua dòng tiêu đề
             

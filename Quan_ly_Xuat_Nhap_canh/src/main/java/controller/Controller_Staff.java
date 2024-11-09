@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
 import javax.xml.bind.*;
+import model.Model;
 
 public class Controller_Staff {
     private static String warning;
@@ -25,7 +26,7 @@ public class Controller_Staff {
         if(type.equals("Entry") && (cus_Type.equals("Foreign (Non Visa)") || cus_Type.equals("Foreign (Visa)")) && stay<=0){
             warning = warning + "\nInvalid stay time";
         }
-        if(Controller_Manager.isNationAndPassportExists(nation, passport, new File("wanted.csv"))==true){
+        if(Controller_Manager.isNationAndPassportExists(nation, passport, new File(Model.getWanted_Path()))==true){
             warning = warning + "\nWanted person in "+nation;
         }
         if(!warning.equals("")){

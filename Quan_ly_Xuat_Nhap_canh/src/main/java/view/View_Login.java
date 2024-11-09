@@ -9,6 +9,8 @@ import javax.swing.*;
 import view.staff.View_Staff;
 import controller.Controller;
 import controller.Md5;
+import java.io.File;
+import model.Model;
 import view.manager.View_Manager;
 /**
  *
@@ -46,6 +48,7 @@ public class View_Login extends javax.swing.JFrame {
         id_Field = new javax.swing.JTextField();
         login_Button = new javax.swing.JButton();
         password_Field = new javax.swing.JPasswordField();
+        staff_Path_button = new javax.swing.JButton();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -104,17 +107,21 @@ public class View_Login extends javax.swing.JFrame {
             }
         });
 
+        staff_Path_button.setText("Staff path");
+        staff_Path_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                staff_Path_buttonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(255, 255, 255)
-                .addComponent(login_Button)
-                .addGap(155, 264, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(169, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(login_Button)
                     .addComponent(login_Frame_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
@@ -128,7 +135,8 @@ public class View_Login extends javax.swing.JFrame {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(id_Field, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
-                                .addComponent(password_Field)))))
+                                .addComponent(password_Field)))
+                        .addComponent(staff_Path_button, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(175, 175, 175))
         );
         layout.setVerticalGroup(
@@ -149,7 +157,9 @@ public class View_Login extends javax.swing.JFrame {
                     .addComponent(password_Label)
                     .addComponent(password_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
-                .addComponent(login_Button)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(login_Button)
+                    .addComponent(staff_Path_button))
                 .addContainerGap(82, Short.MAX_VALUE))
         );
 
@@ -185,6 +195,30 @@ public class View_Login extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_login_ButtonActionPerformed
+
+    private void staff_Path_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_staff_Path_buttonActionPerformed
+        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+
+        // Tùy chọn: Cho phép chọn nhiều tệp hoặc một tệp
+        fileChooser.setMultiSelectionEnabled(false);  // Chỉ chọn một tệp
+
+        // Thiết lập tiêu đề cho hộp thoại chọn tệp
+        fileChooser.setDialogTitle("Chọn tệp CSV");
+
+        // Hiển thị hộp thoại và chờ người dùng chọn
+        int result = fileChooser.showOpenDialog(null);
+
+        // Nếu người dùng nhấn "Open" thì lấy đường dẫn tệp đã chọn
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            String filePath = selectedFile.getAbsolutePath();  // Lấy đường dẫn tuyệt đối của tệp
+            Model.setUser_Path(filePath);
+
+        } else {
+            JOptionPane.showMessageDialog(null, "This file is not suitable", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_staff_Path_buttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,5 +275,6 @@ public class View_Login extends javax.swing.JFrame {
     private javax.swing.JLabel password_Label;
     private javax.swing.JComboBox<String> role_Combobox;
     private javax.swing.JLabel role_Label;
+    private javax.swing.JButton staff_Path_button;
     // End of variables declaration//GEN-END:variables
 }
