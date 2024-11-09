@@ -5,6 +5,9 @@
 package controller;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
@@ -98,5 +101,63 @@ public class Controller_Manager {
         } else {
             sorter.setRowFilter(RowFilter.regexFilter("(?i)" + text,1)); // Lọc dữ liệu khớp với văn bản
         }
+    }
+    
+    public static DefaultTableModel load_Filter_Record_Data(DefaultTableModel model, LocalDateTime fromDate, LocalDateTime toDate,
+                                                            boolean type_Entry, boolean type_Exit,
+                                                            boolean cusType_Id_Card, boolean cusType_Birth_Cert,
+                                                            boolean cusType_Non_Visa, boolean cusType_Visa) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        for (int line = 0; line<model.getRowCount();line++) {
+            LocalDateTime entryTime = LocalDateTime.parse((String)model.getValueAt(line, 0), formatter);
+            if(entryTime.isBefore(fromDate) || entryTime.isAfter(toDate)){
+                model.removeRow(line);
+                line = line - 1;
+                continue;
+            }
+            if(type_Entry==false){
+                if (model.getValueAt(line, 1).toString().equals("Entry")) {
+                    model.removeRow(line);
+                    line = line - 1;
+                    continue;
+                }
+            }
+            if(type_Exit==false){
+                if (model.getValueAt(line, 1).toString().equals("Exit")) {
+                    model.removeRow(line);
+                    line = line - 1;
+                    continue;
+                }
+            }
+            if(cusType_Id_Card==false){
+                if (model.getValueAt(line, 2).toString().equals("Domestic (ID card)")) {
+                    model.removeRow(line);
+                    line = line - 1;
+                    continue;
+                }
+            }
+            if(cusType_Birth_Cert==false){
+                if (model.getValueAt(line, 2).toString().equals("Domestic (Birth cert)")) {
+                    model.removeRow(line);
+                    line = line - 1;
+                    continue;
+                }
+            }
+            if(cusType_Non_Visa==false){
+                if (model.getValueAt(line, 2).toString().equals("Foreign (Non Visa)")) {
+                    model.removeRow(line);
+                    line = line - 1;
+                    continue;
+                }
+            }
+            if(cusType_Visa==false){
+                if (model.getValueAt(line, 2).toString().equals("Foreign (Visa)")) {
+                    model.removeRow(line);
+                    line = line - 1;
+                    continue;
+                }
+            }
+        }
+        return model;
     }
 }
